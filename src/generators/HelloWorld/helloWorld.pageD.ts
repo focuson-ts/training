@@ -4,13 +4,12 @@ import {helloWorldRD} from "./helloWorld.restD";
 
 export const HelloWorldPage: ExampleMainPage = {
     buttons: {},
-    display: { target: [ 'fromApi' ], dataDD: helloWorldDD },
+    display: { target: '~/fromApi', dataDD: helloWorldDD },
     domain: { fromApi: { dataDD: helloWorldDD } },
     initialValue: {},
     modals: [],
-    modes: ['view'],
+    modes: ['edit'],
     name: "HelloWorldMainPage",
     pageType: "MainPage",
-    rest: { dropdownsRD: { rest: helloWorldRD, targetFromPath: [ 'fromApi' ], fetcher: true } }
-
+    rest: { restDataRD: { rest: helloWorldRD, targetFromPath: '~/fromApi', fetcher: true } }
 }

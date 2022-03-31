@@ -14,13 +14,13 @@
 2) run "**ts-node ./src/focuson.generate.ts**" from terminal ---> this will generate two folders
     - #####formTS here is the generated front-end
     - #####formJava here is the generated back-end
-3) inside formTs run "**yarn**"
+3) inside formTs run "**npm install**"
 4) inside formJava, run **src/main/java/focuson/data/ExampleApp.java**.
 
     * if using IntelliJ, right click on 
 pom.xml file and add as maven project, then right click on ExampleApp.java and run.
 
-5) inside formTS run "**yarn start**"
+5) inside formTS run "**npm start**"
 
     * you can run "**tsc**" to check for compile errors
 
