@@ -8,7 +8,7 @@ export const HelloWorldPage: ExampleMainPage = {
     domain: { fromApi: { dataDD: helloWorldDD } },
     initialValue: {},
     modals: [],
-    modes: ['edit'],
+    modes: ['view'],
     name: "HelloWorldMainPage",
     pageType: "MainPage",
     rest: { restDataRD: { rest: helloWorldRD, targetFromPath: '~/fromApi', fetcher: true } }
