@@ -1,8 +1,8 @@
-import { ExampleMainPage } from "../common";
+import { TrainingMainPage } from "../common";
 import {helloWorldDD} from "./helloWorld.dataD";
 import {helloWorldRD} from "./helloWorld.restD";
 
-export const HelloWorldPage: ExampleMainPage = {
+export const HelloWorldPage: TrainingMainPage = {
     buttons: {},
     display: { target: '~/fromApi', dataDD: helloWorldDD },
     domain: { fromApi: { dataDD: helloWorldDD } },

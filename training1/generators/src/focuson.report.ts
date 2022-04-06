@@ -1,5 +1,5 @@
-import { generatedPages } from "./focuson.config..sample";
 import { makeReport } from "@focuson/forms";
+import { generatedPages } from "./localConfig";
 
 let lines: string[] = makeReport ( generatedPages );
 lines.forEach ( p => {

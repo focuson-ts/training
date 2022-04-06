@@ -1,16 +1,9 @@
-import { AllGuardCreator, directorySpec, generate, makeButtons, params } from "@focuson/forms";
-import { DirectorySpec } from "@focuson/files";
+import { AllGuardCreator, generate, makeButtons } from "@focuson/forms";
 import *  as fse from "fs-extra";
-import { devAppConfig, focusOnVersion, generatedPages, javaOutputRoot, tsRoot } from "./focuson.config";
-import { GenerateLogLevel } from "@focuson/utils";
-
-const logLevel: GenerateLogLevel = 'detailed';
+import { devAppConfig, directorySpecPointingAtNodeModules,  javaOutputRoot, logLevel, tsRoot } from "./focuson.config";
+import { generatedPages, javaAndTsParams } from "./localConfig";
 
 
-export const directorySpecPointingAtNodeModules: DirectorySpec = {
-  ...directorySpec,
-  backup: '../../node_modules/@focuson/forms'
-}
-generate ( logLevel, directorySpecPointingAtNodeModules, devAppConfig, { ...params, focusOnVersion }, javaOutputRoot, tsRoot, AllGuardCreator, makeButtons () ) ( generatedPages )
-// fse.copySync ( 'src/components', tsRoot + "/src/components" )
+generate ( logLevel, directorySpecPointingAtNodeModules, devAppConfig, javaAndTsParams, javaOutputRoot, tsRoot, AllGuardCreator, makeButtons () ) ( generatedPages )
+
 fse.copySync ( 'src/formComponents', tsRoot + "/src/formComponents" )
