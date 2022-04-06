@@ -1,0 +1,14 @@
+{
+  "template": "training",
+  "name": "@focuson/training4_generators",
+  "description": "Search",
+  "details": {
+    "ideify": true,
+    "publish": false,
+    "generate": true,
+    "test": true,
+    "links": [],
+    "extraDeps": {},
+    "extraDevDeps": {}
+  }
+}

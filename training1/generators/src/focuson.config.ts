@@ -1,6 +1,7 @@
 import { CombinedParams, directorySpec, params, SimpleDisplayComp } from "@focuson/forms";
 import { DirectorySpec, loadFile } from "@focuson/files";
 import { GenerateLogLevel } from "@focuson/utils";
+import process from "process";
 
 export const logLevel: GenerateLogLevel = 'detailed';
 export let javaOutputRoot = '../formJava'
@@ -13,10 +14,10 @@ export const devAppConfig = {
   combine: MyCombineCD,
   debug: { fetcherDebug: false, restDebug: false, selectedPageDebug: false, loadTreeDebug: false, showTracing: false, recordTrace: true }
 }
-
+console.log('yarn', process.env.YARN)
 export const directorySpecPointingAtNodeModules: DirectorySpec = {
   ...directorySpec,
-  backup: '../../node_modules/@focuson/forms'
+  backup: (process.env[ 'yarn' ] ? '../../' : '') + 'node_modules/@focuson/forms'
 }
 
 export const focusOnVersion: string = JSON.parse ( loadFile ( 'package.json' ) ).dependencies[ "@focuson/forms" ]
