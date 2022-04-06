@@ -4,7 +4,8 @@
     "training1/*",
     "training2/*",
     "training3/*",
-    "training4/*"
+    "training4/*",
+    "training5/*"
   ],
   "name": "@focuson/training",
   "description": "This is the 'master project' with many child projects. There is no code in this project: it is all managed in child projects",
