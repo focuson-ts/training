@@ -9,6 +9,7 @@
     "test": true,
     "links": [],
     "extraDeps": {},
-    "extraDevDeps": {}
+    "extraDevDeps": {},
+    "generator": true
   }
 }
