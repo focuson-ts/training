@@ -1,0 +1,244 @@
+body {
+    font: 14px "Century Gothic", Futura, sans-serif;
+    margin: 20px;
+    background:rgba(241, 241, 241, 0.5);
+}
+
+ol, ul {
+    padding-left: 30px;
+}
+li {
+    display: inline-block;
+    padding: 2px 2px 0 0;
+}
+
+h1 {
+    color: blue;
+    font-weight: bold;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.outlined, table, th, td {
+    border: 1px solid;
+}
+
+.status {
+    margin-bottom: 10px;
+}
+
+input {
+    font-size: revert;
+    height: 1.3rem;
+}
+
+input.view {
+    border: none;
+    text-decoration: none;
+}
+input:invalid {
+    background: #ffdddd;
+    border: 1px solid red;
+}
+input:valid{
+    background: none;
+}
+
+#container {
+    min-height: 500px;
+    display: block;
+    width: 100%;
+    background: #fff;
+    padding: 25px;
+}
+
+button {
+    color: #fff;
+    margin: 5px !important;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    display: inline-block;
+    font-weight: bold;
+    /* line-height: 1.5; */
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    font-size: 0.75rem;
+    border-radius: 0.25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+button:focus {
+    color: #fff;
+    background-color: #06439e;
+    border-color: #053b8b;
+    box-shadow: 0 0 0 0.25rem rgb(49 132 253 / 50%);
+}
+
+button:hover {
+    color: #fff;
+    background-color: #06439e;
+    border-color: #053b8b;
+}
+
+button:disabled {
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    pointer-events: none;
+    opacity: .65;
+}
+
+
+input:read-only, input:disabled, select:read-only, select:disabled {
+    background-color: #e9ecef;
+    opacity: 1;
+}
+
+.mainPage {
+    border: 1px solid black;
+    padding: 20px;
+    height: auto;
+    position: relative;
+}
+
+.layout {
+    display: flex;
+    flex-direction: column;
+    gap: 15px
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {background-color: lightgray;}
+
+.labelDropdownButton {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 5px
+}
+
+.labelDropdown {
+    display: flex;
+    align-items: center;
+}
+
+.labelValue {
+    display: flex;
+    align-items: center;
+}
+
+.labelValueButton {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 5px
+}
+
+label {
+    margin: 10px;
+}
+
+select {
+    height: 1.625rem;
+}
+
+.modalPopup {
+    /*display: none;*/ /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modalPopup-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+}
+
+/* The Close Button */
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modalPopup {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modalPopup-content {
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    padding: 20px;
+    background-color: white;
+}
+
+.close-button:hover {
+    background-color: darkgray;
+}
+
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+#container {
+    position: relative;
+    width: 1024px;
+}
+
+#modalPage {
+    position: absolute;
+    top: 0;
+    background-color: white;
+    width: 100%;
+    height: 100%
+}
+
+.row {
+    margin: 0!important;
+}

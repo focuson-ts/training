@@ -1,0 +1,66 @@
+{
+  "browserslist":    {
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ],
+    "production":  [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ]
+  },
+  "dependencies":    {
+    "@focuson/forms": "^0.5.26",
+    "react":      "^17.0.1",
+    "react-dom":  "^17.0.1",
+    "typescript": "^4.1.5"
+  },
+  "description":     "This is a project that allows code to be (safely) fetched on demand from a server. The url holding the code is including in the json",
+  "devDependencies": {
+    "@focuson/stories":  "^0.5.26",
+    "fs-extra": "^10.0.1",
+    "@types/fs-extra": "^9.0.13"
+  },
+  "files":           [
+    "LICENSE.md",
+    "README.md",
+    "dist/index.js",
+    "dist/index.d.ts",
+    "dist/src/"
+  ],
+  "keywords":        [
+    "functionalprogramming",
+    "lens",
+    "react",
+    "optics"
+  ],
+  "license":         "MIT",
+  "main":            "dist/index",
+  "types":           "dist/index",
+  "repository":      "github:focuson-ts/focuson",
+  "scripts":         {
+    "start":      "react-scripts start",
+    "test":       "jest --config jest.config.json",
+    "test:watch": "npm run test -- --watch",
+    "storybook":  "start-storybook -p 6006 -s public"
+  },
+  "version":         "<version>",
+  "eslintConfig":    {
+    "extends":   [
+      "react-app",
+      "react-app/jest"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
+    ]
+  }
+}

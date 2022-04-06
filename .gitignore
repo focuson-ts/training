@@ -1,15 +1,19 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
+node_modules/
 /.pnp
 .pnp.js
+.tgz
 
+out/
+.vs/
 # testing
 /coverage
 
 # production
 /build
+dist/
 
 # misc
 .DS_Store
@@ -22,4 +26,23 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .idea/
-*.iml
+debug.log
+src/react-app-env.d.ts
+
+public/created/
+out/
+.eslintcache
+.idea/
+
+*.review.json
+*.old.json
+*.review
+.status
+.log
+.profile
+*.tgz
+created/
+coverage/
+.session/
+
+.vs/

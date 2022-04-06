@@ -1,0 +1,14 @@
+{
+  "template": "training",
+  "name": "@focuson/training1_generators",
+  "description": "Hello World.",
+  "details": {
+    "ideify": true,
+    "publish": false,
+    "generate": true,
+    "test": true,
+    "links": [],
+    "extraDeps": {},
+    "extraDevDeps": {}
+  }
+}

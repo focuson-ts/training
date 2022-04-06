@@ -1,0 +1,6 @@
+type Query{
+  getHelloWorldDomainData(accountSeq: String!, applicationRef: String!, brandRef: String!, clientRef: String!, employmentSeq: String!, vbAccountSeq: String!, vbAccountType: String!):HelloWorldDomainData!
+}
+type HelloWorldDomainData{
+  message: String!
+}
