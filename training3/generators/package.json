@@ -17,7 +17,7 @@
     "react-dom": "^17.0.1",
     "typescript": "^4.1.5"
   },
-  "description": "Address view: fetching data from the api, and displaying it",
+  "description": "Input components and Datads",
   "devDependencies": {
     "@focuson/stories": "^0.5.28",
     "fs-extra": "^10.0.1",
@@ -67,7 +67,7 @@
     ]
   },
   "template": "training",
-  "name": "@focuson/training2_generators",
+  "name": "@focuson/training3_generators",
   "details": {
     "ideify": true,
     "publish": false,

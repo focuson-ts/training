@@ -1,9 +1,8 @@
-import { ExampleMainPage } from "./generators/common";
-import { HelloWorldPage } from "./generators/HelloWorld/helloWorld.pageD";
+import { TrainingMainPage } from "./generators/common";
 import { CombinedParams, params } from "@focuson/forms";
 import { focusOnVersion } from "./focuson.config";
 
-export const generatedPages: ExampleMainPage[] = [ ];
+export const generatedPages: TrainingMainPage[] = [ ];
 
-const applicationName = 'Training1'
+const applicationName = 'AppName'
 export const javaAndTsParams: CombinedParams = { ...params, focusOnVersion, applicationName };

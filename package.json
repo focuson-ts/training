@@ -2,7 +2,8 @@
   "private": true,
   "workspaces": [
     "training1/*",
-    "training2/*"
+    "training2/*",
+    "training3/*"
   ],
   "name": "@focuson/training",
   "description": "This is the 'master project' with many child projects. There is no code in this project: it is all managed in child projects",

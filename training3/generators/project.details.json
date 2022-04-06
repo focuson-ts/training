@@ -1,0 +1,14 @@
+{
+  "template": "training",
+  "name": "@focuson/training3_generators",
+  "description": "Input components and Datads",
+  "details": {
+    "ideify": true,
+    "publish": false,
+    "generate": true,
+    "test": true,
+    "links": [],
+    "extraDeps": {},
+    "extraDevDeps": {}
+  }
+}
