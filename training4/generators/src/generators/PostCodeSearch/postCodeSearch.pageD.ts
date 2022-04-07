@@ -14,7 +14,7 @@ export const postCodeMainPagePD: TrainingMainPage = {
     postcode: { dataDD: postCodeSearchDataD },
     selectedPostcodeIndex: { dataDD: IntegerDD },
   },
-  initialValue: { main: {}, postcode: { search: '', searchResults: [], addressResults: { addressLine1: '', addressLine2: '', addressLine3: '', addressLine4: '' } } },
+  initialValue:'empty',
   modals: [ { modal: postCodeModalPagePD } ],
   modes: [ 'edit' ],
   rest: {

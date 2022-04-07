@@ -54,7 +54,14 @@
       "inLinksOrder": true
     },
     "ls-generated":   {"description": "lists all the projects that were generated", "commands": ["js:process.cwd()"], "guard":       "${projectDetails.details.generated}"},
-
+    "kill-generated":    {
+      "description": "removes all the projects that have been generated, but throws lots of errors",
+      "osGuard": "Windows",
+      "commands":    [
+        {"name": "kill formJava", "command": "rmdir /Q /S formJava ","directory": ".."},
+        {"name": "Kill formTs", "command": "rmdir /Q /S formTs ","directory": ".."}
+      ]
+    },
     "ls-generate":    {
       "description": "lists the projects that will respond to the generate command",
       "guard":       "${projectDetails.details.generator}",
