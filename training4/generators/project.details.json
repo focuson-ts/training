@@ -10,6 +10,8 @@
     "links":        [],
     "extraDeps":    {},
     "extraDevDeps": {},
-    "generator":    true
+    "generator":    true,
+    "tsPort":       3004,
+    "javaPort":     8084
   }
 }

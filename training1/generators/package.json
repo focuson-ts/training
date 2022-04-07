@@ -12,14 +12,14 @@
     ]
   },
   "dependencies": {
-    "@focuson/forms": "^0.5.37",
+    "@focuson/forms": "^0.5.41",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "typescript": "^4.1.5"
   },
   "description": "Hello World.",
   "devDependencies": {
-    "@focuson/stories": "^0.5.37",
+    "@focuson/stories": "^0.5.41",
     "fs-extra": "^10.0.1",
     "@types/fs-extra": "^9.0.13",
     "@types/jest": "^26.0.15",
@@ -76,6 +76,7 @@
     "links": [],
     "extraDeps": {},
     "extraDevDeps": {},
-    "generator": true
+    "generator": true,
+    "javaPort": 8081
   }
 }

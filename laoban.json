@@ -1,50 +1,39 @@
 {
   "templateDir":    "${laobanDirectory}/template",
   "versionFile":    "${templateDir}/version.txt",
-  "throttle": 3,
+  "throttle":       0,
   "log":            ".log",
   "status":         ".status",
   "profile":        ".profile",
   "packageManager": "npm",
   "scripts":        {
-    "log":            {"description": "displays the log file", "commands": ["cat ${log}"]},
-    "link":           {
+    "log":                {"description": "displays the log file", "commands": ["cat ${log}"]},
+    "link":               {
       "description": "call '${packageManager} link' in each project directory",
       "commands":    [
         {"name": "tsc", "command": "tsc --noEmit false --outDir dist", "status": true},
         {"name": "link", "command": "cd dist && ${packageManager} link", "status": true}
       ]
     },
-    "ls":             {"description": "lists all the projects", "commands": ["js:process.cwd()"]},
-    "ls-names":       {"description": "lists all the projects and their nams ", "commands": ["js:`${process.cwd().padEnd(50)} ${projectDetails.name}`"]},
-    "clean":          {"description": "removes the dist directory", "commands": ["rm -rf dist", "rm -f .status", "rm -f .log", "rm -f .profile"]},
-    "tsc":            {
+    "ls":                 {"description": "lists all the projects", "commands": ["js:process.cwd()"]},
+    "ls-names":           {"description": "lists all the projects and their namse ", "commands": ["js:`${process.cwd().padEnd(50)} ${projectDetails.name}`"]},
+    "clean":              {"description": "removes the dist directory", "commands": ["rm -rf dist", "rm -f .status", "rm -f .log", "rm -f .profile"]},
+    "tsc":                {
       "guard":       "${projectDetails.details.tsc}",
       "description": "runs tsc",
       "commands":    [{"name": "tsc", "command": "tsc --noEmit false --outDir dist", "status": true}]
     },
-    "test":           {
+    "test":               {
       "description": "runs ${packageManager} test",
       "guard":       "${projectDetails.details.test}",
       "commands":    [{"name": "test", "command": "${packageManager} test", "status": true}]
     },
-    "ls-tests":       {
+    "ls-tests":           {
       "description": "lists the projects with tests in them",
       "guard":       "${projectDetails.details.test}",
       "commands":    ["js:process.cwd()"]
     },
-      "ls-ports":       {
-      "description": "lists the projects that have a port defined in project.details.json",
-      "guard":       "${projectDetails.details.port}",
-      "commands":    ["js:process.cwd()"]
-    },
-    "start":          {
-      "description": "${packageManager} start for all projects that have a port defined in project.details.json",
-      "guard":       "${projectDetails.details.port}",
-      "commands":    ["${packageManager} start"],
-      "env":         {"PORT": "${projectDetails.details.port}"}
-    },
-    "pack":           {
+    "pack":               {
       "description":  "does everything for a publish except the actual 'npm publish'",
       "guard":        "${projectDetails.details.publish}",
       "commands":     [
@@ -53,34 +42,64 @@
       ],
       "inLinksOrder": true
     },
-    "ls-generated":   {"description": "lists all the projects that were generated", "commands": ["js:process.cwd()"], "guard":       "${projectDetails.details.generated}"},
-    "kill-generated":    {
-      "description": "removes all the projects that have been generated, but throws lots of errors",
-      "osGuard": "Windows",
-      "commands":    [
-        {"name": "kill formJava", "command": "rmdir /Q /S formJava ","directory": ".."},
-        {"name": "Kill formTs", "command": "rmdir /Q /S formTs ","directory": ".."}
-      ]
+    "ls-generated":       {"description": "lists all the projects that were generated", "commands": ["js:process.cwd()"], "guard": "${projectDetails.details.generated}"},
+    "kill-generated-src": {
+      "description": "removes the src folders ",
+      "guard":       "${projectDetails.details.generated}",
+      "osGuard":     "Windows",
+      "commands":    ["rmdir /Q /S src "]
     },
-    "ls-generate":    {
+    "tsc-react":          {
+      "description": "Compiles the projects that have a port defined",
+      "guard":       "${projectDetails.details.port}",
+      "commands":    [{"name": "tsc-react", "command": "tsc --noEmit false --outDir dist", "status": true}]
+    },
+    "ls-generate":        {
       "description": "lists the projects that will respond to the generate command",
       "guard":       "${projectDetails.details.generator}",
       "commands":    [
         {"name": "generate", "command": "js:`${process.cwd()} ${projectDetails.name}`"}
       ]
     },
-    "generate":       {
+    "generate":           {
       "description": "generates the type script and java projects",
       "guard":       "${projectDetails.details.generator}",
       "commands":    [
         {"name": "generate", "command": " npx ts-node src/focuson.generate.ts", "status": true}
       ]
     },
-    "mvn": {
+    "mvn":                {
       "description": "generates the type script and java projects",
       "guard":       "${projectDetails.details.mvn}",
       "commands":    [
         {"name": "maven", "command": "mvn clean install", "status": true}
+      ]
+    },
+    "run-api":            {
+      "description": "Runs the spring boot server (the jar must exist in /target...",
+      "guard":       "${projectDetails.details.mvn}",
+      "commands":    [
+        {"name": "run-java", "command": "java -jar  .\\target\\${projectDetails.details.name}-2.5.0.jar --server.port=${projectDetails.details.javaPort}"}
+      ]
+    },
+    "ls-api":             {
+      "description": "Lists the spring boot servers and their port",
+      "guard":       "${projectDetails.details.mvn}",
+      "commands":    [
+        {"name": "echo-java", "command": "echo java -jar  .\\target\\${projectDetails.details.name}-2.5.0.jar --server.port=${projectDetails.details.javaPort}"}
+      ]
+    },
+    "run-react":          {
+      "description": "${packageManager} start for all  projects that have a port defined in project.details.json",
+      "guard":       "${projectDetails.details.port}",
+      "commands":    ["${packageManager} start"],
+      "env":         {"PORT": "${projectDetails.details.port}"}
+    },
+    "ls-react":           {
+      "description": "lists the projects that have a port defined in project.details.json",
+      "guard":       "${projectDetails.details.port}",
+      "commands":    [
+        "js: '${projectDetails.name}'.padEnd(40)+ ' React ${projectDetails.details.port} Java ${projectDetails.details.javaPort}'"
       ]
     }
   }
