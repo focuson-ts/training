@@ -9,7 +9,7 @@ export const addressDD: TrainingDataD = {
         addressLine1: { dataDD: StringDD, sample: [ addressViewSample.addressLine1 ], displayParams: { required: false } },
         addressLine2: { dataDD: StringDD, sample: [ addressViewSample.addressLine2 ] },
         addressLine3: { dataDD: StringDD, sample: [ addressViewSample.addressLine3 ] },
-        addressLine4: { dataDD: StringDD, sample: [ addressViewSample.addressLine4 ], displayParams: { required: false } },
+        addressLine4: { dataDD: StringDD, sample: [ addressViewSample.addressLine4 ], displayParams: { required: true } },
         postCode: { dataDD: StringDD, sample: [ addressViewSample.postCode ] }
     }
 }
