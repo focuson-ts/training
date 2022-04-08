@@ -38,7 +38,7 @@ export const customerDetailsDD: TrainingDataD = {
         phone: {
             dataDD: NatNumDd,
             displayParams: { label: 'Mobile No.' },
-            sample: [ '76587' ]
+            sample: [ 76587 ]
         },
         address: {
             dataDD: ManyLineStringDD,
@@ -51,7 +51,7 @@ export const customerDetailsDD: TrainingDataD = {
         goPaperless: {
             dataDD: BooleanDD,
             displayParams: { label: 'Yes, go paperless for all accounts' },
-            sample: [ 'true' ]
+            sample: [ true ]
         },
         servicesActive: {
             dataDD: servicesActiveDD,

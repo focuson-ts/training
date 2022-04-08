@@ -49,12 +49,24 @@ export const MainOccupationDetailsPageSummaryPD: TrainingMainPage = {
     },
     layout: { component: HideButtonsCD, displayParams: { hide: [ 'additionalInfoFirst', 'additionalInfoSecond', 'list' ] } },
     buttons: {
-        // TODO rest on commit
         edit: {
             control: 'ModalButton', modal: editOccupationIncomeSummaryModalPD, mode: 'edit',
             focusOn: '~/tempForOccupationEdit',
             copy: { from: '~/fromApi/occupationAndIncome/customerOccupationIncomeDetails' },
-            copyOnClose: { to: '~/fromApi/occupationAndIncome/customerOccupationIncomeDetails' }
-        }
+            // copyOnClose: { to: '~/fromApi/occupationAndIncome/customerOccupationIncomeDetails' },
+            restOnCommit: { restName: 'occupationAndIncomeRD',  action: 'update', result: 'refresh'},
+        },
+        additionalInfoFirst: {
+            by: { condition: "equals", path: '~/tempForOccupationEdit/areYou', value: `"E"`},
+            guard: {
+                control: 'ModalButton', modal: additionalInfoFirstModalPD, mode: 'view', focusOn: '~/tempForAdditionalInfoFirst',
+                copy: { from: '~/fromApi/additionalInfoFirst' },
+                copyOnClose: { to: '~/fromApi/additionalInfoFirst' } } },
+        additionalInfoSecond: {
+            by: { condition: "equals", path: '~/tempForOccupationEdit/areYou', value: `"S"` },
+            guard: {
+                control: 'ModalButton', modal: additionalInfoSecondModalPD, mode: 'edit', focusOn: '~/tempForAdditionalInfoSecond',
+                copy: { from: '~/fromApi/additionalInfoSecond' },
+                copyOnClose: { to: '~/fromApi/additionalInfoSecond' } } },
     }
 }

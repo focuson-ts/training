@@ -35,9 +35,6 @@ export const addressViewMainPagePD: TrainingMainPage = {
             copy: [
                 { from: '~/fromApi', to: '~/temp' },
             ],
-            copyOnClose: [
-                { from: '~/temp', to: '~/fromApi' },
-            ],
             restOnCommit: { restName: 'addressViewRD', action: 'update', result: 'refresh' }
         }
     }

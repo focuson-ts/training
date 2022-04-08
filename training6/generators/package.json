@@ -75,6 +75,9 @@
     "test": true,
     "links": [],
     "extraDeps": {},
-    "extraDevDeps": {}
+    "extraDevDeps": {},
+    "generator": true,
+    "tsPort": 3005,
+    "javaPort": 8085
   }
 }
