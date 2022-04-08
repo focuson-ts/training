@@ -26,12 +26,6 @@ export interface single_occupation_type {
             netAssetsLastYear: string,
             netAssetsPenultimateYear: string
         },
-        otherSourcesOfIncome: {
-            clientOtherIncomeSeq: string,
-            otherIncomeType: string,
-            incomeFreqRef: frequenciesResponse,
-            amount: number
-        },
         dropdowns: {
             employmentStatus: employmentStatus
             contractTypesResponse: contractTypeResponse
@@ -42,7 +36,6 @@ export interface single_occupation_type {
     tempForOccupationEdit: { /* occupationAndIncomeSample --> look there */  },
     tempForAdditionalInfoFirst: { /* additionalInfoFirst */ },
     tempForAdditionalInfoSecond: { /* additionalInfoSecond */ },
-    tempForOtherSourcesOfIncome: { /* otherSourcesOfIncome */ }
 }
 
 export interface frequenciesResponse {

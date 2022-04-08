@@ -2,8 +2,7 @@ import {TrainingModalPage} from "../common";
 import {
     additionalInfoFirstDD,
     additionalInfoSecondDD, listOccupationsDD,
-    oneOccupationIncomeDetailsDD,
-    otherIncomeResponseDD
+    oneOccupationIncomeDetailsDD
 } from "./singleOccupation.dataD";
 import {HideButtonsCD} from "@focuson/forms/dist/src/buttons/hideButtonsCD";
 
@@ -29,17 +28,6 @@ export const additionalInfoSecondModalPD: TrainingModalPage = {
     },
 }
 
-export const editOtherSourcesOfIncomeModalPD: TrainingModalPage = {
-    name: 'OtherSourcesOfIncomeModal',
-    pageType: 'ModalPopup',
-    modes: [ 'edit' ],
-    display: { target: '~/tempForOtherSourcesOfIncome', dataDD: otherIncomeResponseDD},
-    buttons: {
-        cancel: { control: 'ModalCancelButton' },
-        commit: { control: 'ModalCommitButton' }
-    },
-}
-
 export const listOccupationsModalPD: TrainingModalPage = {
     name: 'ListOccupationsModal',
     pageType: 'ModalPopup',
@@ -56,7 +44,7 @@ export const editOccupationIncomeSummaryModalPD: TrainingModalPage = {
     pageType: 'ModalPage',
     modes: [ 'view', 'edit' ],
     display: { target: '~/tempForOccupationEdit', dataDD: oneOccupationIncomeDetailsDD },
-    layout: { component: HideButtonsCD, displayParams: { hide: [ 'additionalInfoFirst', 'additionalInfoSecond', 'otherSourcesOfIncome', 'list' ] } },
+    layout: { component: HideButtonsCD, displayParams: { hide: [ 'additionalInfoFirst', 'additionalInfoSecond', 'list' ] } },
     buttons: {
         cancel: { control: 'ModalCancelButton' },
         commit: { control: 'ModalCommitButton' },
@@ -72,12 +60,6 @@ export const editOccupationIncomeSummaryModalPD: TrainingModalPage = {
                 control: 'ModalButton', modal: additionalInfoSecondModalPD, mode: 'edit', focusOn: '~/tempForAdditionalInfoSecond',
                 copy: { from: '~/fromApi/additionalInfoSecond' },
                 copyOnClose: { to: '~/fromApi/additionalInfoSecond' } } },
-        otherSourcesOfIncome: {
-            by: { condition: "equals", path: '~/fromApi/occupationAndIncome/customerOccupationIncomeDetails/otherSourceOfIncome', value: `"Y"` },
-            guard: {
-                control: 'ModalButton', modal: editOtherSourcesOfIncomeModalPD, mode: 'edit', focusOn: '~/tempForOtherSourcesOfIncome',
-                copy: { from: '~/fromApi/otherSourcesOfIncome' },
-                copyOnClose: { to: '~/fromApi/otherSourcesOfIncome' } } },
         list: {
             control: 'ModalButton', modal: listOccupationsModalPD, mode: 'edit',
             focusOn: '~/fromApi/occupation',

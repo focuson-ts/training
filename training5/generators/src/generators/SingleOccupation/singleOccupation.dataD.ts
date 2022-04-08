@@ -32,28 +32,6 @@ export const employmentTypeDD: StringPrimitiveDD = {
     enum: EmploymentType
 }
 
-/* ---------------- OTHER SOURCES OF INCOME DD START ---------------- */
-export const otherIncomeResponseDD: TrainingDataD = {
-    name: "OtherIncomeResponse",
-    description: "This is a summary about other income data of a single record",
-    structure: {
-        clientOtherIncomeSeq: { dataDD: StringDD, sample: ['1', '2'] },
-        otherIncomeType: { dataDD: StringDD, sample: [ 'someTypeOne', 'someTypeTwo' ] },
-        incomeFreqRef: { dataDD: frequencyDD, sample: [ HowOften[1], HowOften[2] ] },
-        amount: { dataDD: IntegerDD, sample: [ '1000', '2000' ] }
-    }
-}
-export const otherSourcesOfIncomeDataDD: TrainingRepeatingD = {
-    paged: false,
-    display: TableCD,
-    name: "OtherIncomeData",
-    description: "This is a summary about other income data",
-    displayParams: { order: [ 'otherIncomeType', 'incomeFreqRef', 'amount' ]  },
-    dataDD: otherIncomeResponseDD,
-    sampleCount: 2
-}
-/* ---------------- OTHER SOURCES OF INCOME DD END ---------------- */
-
 /* ---------------- ADDITIONAL INFO SECOND DD START ---------------- */
 export const additionalInfoSecondDD: TrainingDataD = {
     name: 'AdditionalInfoSecond',
@@ -110,7 +88,6 @@ export const oneOccupationIncomeDetailsDD: TrainingDataD = {
         ownShareOfTheCompany: { condition: 'in', path: 'ownShareOfTheCompany', values: yesNoDD.enum },
         owningSharesPct: { condition: 'in', path: 'owningSharesPct', values: yesNoDD.enum },
         employmentType: { condition: 'in', path: 'employmentType', values: employmentTypeDD.enum },
-        otherSourceOfIncome: { condition: 'in', path: 'otherSourceOfIncome', values: yesNoDD.enum },
     },
     structure: {
         areYou: { dataDD: customerStatusDD, displayParams: { label: "Are you... ", buttons: ['additionalInfoFirst', 'additionalInfoSecond'] } },
@@ -122,17 +99,16 @@ export const oneOccupationIncomeDetailsDD: TrainingDataD = {
         employmentType: { dataDD: employmentTypeDD, displayParams: { label: "Is this employment... " }, guard: { areYou: [ 'E' ], owningSharesPct: [ 'N' ] } },
         empStartDate: { dataDD: DateDD, displayParams: { label: "When did this employment start? (mm/yyyy) " }, guard: { areYou: [ 'E' ], employmentType: [ '1' ] }, sample: [ '10/2002', '10/2005' ] },
         empEndDate: { dataDD: DateDD, displayParams: { label: "When will it finish? (mm/yyyy) " }, guard: { areYou: [ 'E' ], employmentType: [ '2', '3' ] }, sample: ['10/2010', '10/2020'] },
-        annualSalaryBeforeDeduction: { dataDD: IntegerDD, displayParams: { label: "What is your annual salary? (before deductions) " }, guard: { areYou: [ 'E' ], owningSharesPct: [ 'N' ] }, sample: [ '20315', '20330' ] },
-        annualIncomeExcludingRent: { dataDD: IntegerDD, displayParams: { label: "Do you have any other guaranteed annual income? (excluding rent) " }, guard: { areYou: [ 'E' ], owningSharesPct: [ 'N' ] }, sample: [ '13255', '13252' ] },
-        regularCommissionBonus: { dataDD: IntegerDD, displayParams: { label: "Do you have any regular commission, bonus or overtime? " }, guard: { areYou: [ 'E' ], owningSharesPct: [ 'N' ] }, sample: [ '500', '1000' ] },
+        annualSalaryBeforeDeduction: { dataDD: IntegerDD, displayParams: { label: "What is your annual salary? (before deductions) " }, guard: { areYou: [ 'E' ], owningSharesPct: [ 'N' ] }, sample: [ 20315, 20330 ] },
+        annualIncomeExcludingRent: { dataDD: IntegerDD, displayParams: { label: "Do you have any other guaranteed annual income? (excluding rent) " }, guard: { areYou: [ 'E' ], owningSharesPct: [ 'N' ] }, sample: [ 13255, 13252 ] },
+        regularCommissionBonus: { dataDD: IntegerDD, displayParams: { label: "Do you have any regular commission, bonus or overtime? " }, guard: { areYou: [ 'E' ], owningSharesPct: [ 'N' ] }, sample: [ 500, 1000 ] },
         whatTypeOfBusiness: { dataDD: StringDD, displayParams: { label: "What type of business is it? " }, guard: { areYou: [ 'E', 'S' ], owningSharesPct: [ 'Y' ] }, sample: [ 'Saloon', 'Electrical Technical Support' ]   },
         whatNameBusiness: { dataDD: StringDD, displayParams: { label: "What is its name: " }, guard: { areYou: [ 'E', 'S' ], owningSharesPct: [ 'Y' ] }, sample: [ 'XXXXXXXXX', 'YYYYYYYYY' ] },
         establishedYear: { dataDD: StringDD, displayParams: { label: "When was it established? (MM/YYYY) " }, guard: { areYou: [ 'E', 'S' ], owningSharesPct: [ 'Y' ] }, sample: [ '10/2011', '11/2010' ] },
-        annualDrawing3Yrs: { dataDD: IntegerDD, displayParams: { label: "What are your average annual drawings over the past 3 years? " }, guard: { areYou: [ 'E', 'S' ], owningSharesPct: [ 'Y' ] }, sample: [ '100000', '200000' ] },
-        otherSourceOfIncome: { dataDD: yesNoDD, displayParams: { label: "Do you have another sources of income (e.g. rental income) ? ", buttons: ['otherSourcesOfIncome'] }, },
+        annualDrawing3Yrs: { dataDD: IntegerDD, displayParams: { label: "What are your average annual drawings over the past 3 years? " }, guard: { areYou: [ 'E', 'S' ], owningSharesPct: [ 'Y' ] }, sample: [ 100000, 200000 ] },
         createdBy: { dataDD: StringDD, displayParams: { label: "Entry created by: " }, sample: [ 'Seras Alin', 'Seras Alin' ] },
-        empEmploymentSeq: { dataDD: IntegerDD, hidden: true, sample: [ '999998', '999999' ] },
-        accountantAppRoleSeq: { dataDD: IntegerDD, hidden: true, sample: [ '14648851', '14648852' ] },
+        empEmploymentSeq: { dataDD: IntegerDD, hidden: true, sample: [ 999998, 999999 ] },
+        accountantAppRoleSeq: { dataDD: IntegerDD, hidden: true, sample: [ 14648851, 14648852 ] },
     }
 }
 /* ---------------- ONE OCCUPATION INCOME DETAILS DD START ---------------- */
@@ -144,7 +120,7 @@ export const occupationAndIncomeFullDomainDD: TrainingDataD = {
     layout: { component: LayoutCd, displayParams: { details: '[[1,1],[30]]' }  },
     structure: {
         mainCustomerName: { dataDD: StringDD, sample: [ 'Mr XXXXXXXXXX J ABCD Fred Bloggs', 'Mr YYYYYYYYY J ABCD Fred Bloggs' ] },
-        mainClientRef: { dataDD: IntegerDD, hidden: true, sample: [ '13606326', '13606329' ] },
+        mainClientRef: { dataDD: IntegerDD, hidden: true, sample: [ 13606326, 13606329 ] },
         customerOccupationIncomeDetails: { dataDD: oneOccupationIncomeDetailsDD },
     }
 }
@@ -158,7 +134,6 @@ export const fromApiDD: TrainingDataD = {
         occupationAndIncome: { dataDD: occupationAndIncomeFullDomainDD },
         additionalInfoFirst: { dataDD: additionalInfoFirstDD },
         additionalInfoSecond: { dataDD: additionalInfoSecondDD },
-        otherSourcesOfIncome: { dataDD: otherSourcesOfIncomeDataDD },
         occupationsList: { dataDD: listOccupationsDD }
     }
 }
