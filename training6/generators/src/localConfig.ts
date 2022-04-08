@@ -1,7 +1,7 @@
 import {TrainingMainPage} from "./generators/common";
 import { CombinedParams, params } from "@focuson/forms";
 import { focusOnVersion } from "./focuson.config";
-import {MainOccupationDetailsPageSummaryPD} from "./generators/SingleOccupation/singleOccupation.pageD";
+import {MainOccupationDetailsPageSummaryPD} from "./generators/MultipleOccupations/multipleOccupations.pageD";
 
 export const generatedPages: TrainingMainPage[] = [
     MainOccupationDetailsPageSummaryPD ];

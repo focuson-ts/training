@@ -2,7 +2,7 @@ import {RestD} from "@focuson/forms";
 import {commonParams} from "../common";
 import {
     occupationAndIncomeFullDomainDD
-} from "./singleOccupation.dataD";
+} from "./multipleOccupations.dataD";
 
 export const occupationAndIncomeRD: RestD<any> = {
     params: { ...commonParams },

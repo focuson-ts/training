@@ -3,6 +3,8 @@ export interface single_occupation_type {
         occupationAndIncome: {
             mainCustomerName: string,
             mainClientRef: number,
+            jointCustomerName: string,
+            jointClientRef: string,
             customerOccupationIncomeDetails: { /* occupationAndIncomeSample --> look there */ }
         },
         dropdowns: {
@@ -11,16 +13,6 @@ export interface single_occupation_type {
         }
     },
     tempForOccupationEdit: {},
-}
-
-export interface frequenciesResponse {
-    frequencyId: number,
-    frequencyDescription: string
-}
-
-export interface occupationsList {
-    descTypeValue: string,
-    descTypeName: string
 }
 
 export interface employmentStatus {

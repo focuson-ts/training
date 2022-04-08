@@ -1,13 +1,13 @@
 import {TrainingMainPage} from "../common";
 import {
     editOccupationIncomeSummaryModalPD
-} from "./singleOccupation.modalD";
+} from "./multipleOccupations.modalD";
 import {
     fromApiDD,
     occupationAndIncomeFullDomainDD,
     multipleOccupationsIncomeDetailsDD, oneOccupationIncomeDetailsDD,
-} from "./singleOccupation.dataD";
-import { occupationAndIncomeRD } from "./singleOccupation.restD";
+} from "./multipleOccupations.dataD";
+import { occupationAndIncomeRD } from "./multipleOccupations.restD";
 import { HideButtonsCD } from "@focuson/forms";
 
 export const MainOccupationDetailsPageSummaryPD: TrainingMainPage = {

@@ -15,27 +15,16 @@ export interface single_occupation_type {
             postcode: string
         },
         additionalInfoSecond: {
-            businessDetails: {
-                applicantName: string,
-                businessName: string,
-                addressLine1: string,
-                addressLine2: string,
-                addressLine3: string,
-                addressLine4: string,
-                postcode: string
-            },
-            businessFinancialDetails: {
-                turnoverLastYear: string,
-                turnoverPenultimateYear: string,
-                netProfitLastYear: string,
-                netProfitPenultimateYear: string,
-                drawingsLastYear: string,
-                drawingsPenultimateYear: string,
-                dividendsLastYear: string,
-                dividendsPenultimateYear: string,
-                netAssetsLastYear: string,
-                netAssetsPenultimateYear: string
-            }
+            turnoverLastYear: string,
+            turnoverPenultimateYear: string,
+            netProfitLastYear: string,
+            netProfitPenultimateYear: string,
+            drawingsLastYear: string,
+            drawingsPenultimateYear: string,
+            dividendsLastYear: string,
+            dividendsPenultimateYear: string,
+            netAssetsLastYear: string,
+            netAssetsPenultimateYear: string
         },
         otherSourcesOfIncome: {
             clientOtherIncomeSeq: string,

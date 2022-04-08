@@ -1,7 +1,7 @@
 import {TrainingModalPage} from "../common";
 import {
     oneOccupationIncomeDetailsDD,
-} from "./singleOccupation.dataD";
+} from "./multipleOccupations.dataD";
 import {HideButtonsCD} from "@focuson/forms/dist/src/buttons/hideButtonsCD";
 
 export const editOccupationIncomeSummaryModalPD: TrainingModalPage = {
