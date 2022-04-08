@@ -3,7 +3,7 @@ export interface single_occupation_type {
         occupationAndIncome: {
             mainCustomerName: string,
             mainClientRef: number,
-            customerOccupationIncomeDetails: { /* occupationAndIncomeSample --> look there */ }
+            customerOccupationIncomeDetails: { /* ... */ }
         },
         additionalInfoFirst: {
             applicantName: string,

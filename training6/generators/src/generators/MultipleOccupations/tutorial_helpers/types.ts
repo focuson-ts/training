@@ -5,7 +5,7 @@ export interface single_occupation_type {
             mainClientRef: number,
             jointCustomerName: string,
             jointClientRef: string,
-            customerOccupationIncomeDetails: { /* occupationAndIncomeSample --> look there */ }
+            customerOccupationIncomeDetails: { /* ... */ }
         },
         dropdowns: {
             employmentStatus: employmentStatus
