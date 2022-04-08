@@ -1,6 +1,5 @@
 import { TrainingDataD } from "../common";
-import { BooleanDD, DateTimeDD, LabelAndCheckboxInputCD, LabelAndDropDownCD, LabelAndRadioCD, LayoutCd, ManyLineStringDD, NatNumDd, OneLineStringDD, StringDD, StringPrimitiveDD } from "@focuson/forms";
-import { customerDetailsSample } from "./customerDetails.sample";
+import { BooleanDD, DateTimeDD, LabelAndDropDownCD, LabelAndRadioCD, LayoutCd, ManyLineStringDD, NatNumDd, OneLineStringDD, StringDD, StringPrimitiveDD } from "@focuson/forms";
 
 export const titleDD: StringPrimitiveDD = {
     ...OneLineStringDD,
@@ -25,43 +24,42 @@ export const customerDetailsDD: TrainingDataD = {
     structure: {
         title: {
             dataDD: titleDD,
-            sample: [customerDetailsSample.title]
+            sample: [ 'Mr.' ]
         },
         name: {
             dataDD: StringDD,
-            sample: [customerDetailsSample.name]
+            sample: [ 'John Smith' ]
         },
         email: {
             dataDD: StringDD,
             displayParams: { label: 'Email Id' },
-            sample: [customerDetailsSample.email]
+            sample: [ 'john.smith@gmail.com' ]
         },
         phone: {
             dataDD: NatNumDd,
             displayParams: { label: 'Mobile No.' },
-            //@ts-ignore
-            sample: [customerDetailsSample.phone]
+            sample: [ '76587' ]
         },
         address: {
             dataDD: ManyLineStringDD,
-            sample: [customerDetailsSample.address]
+            sample: [ '165 Terrington Place, Cleethorpes, UK' ]
         },
         postcode: {
             dataDD: StringDD,
-            sample: [customerDetailsSample.postcode]
+            sample: [ 'DN359EH' ]
         },
         goPaperless: {
             dataDD: BooleanDD,
             displayParams: { label: 'Yes, go paperless for all accounts' },
-            // sample: [customerDetailsSample.goPaperless]
+            sample: [ 'true' ]
         },
         servicesActive: {
             dataDD: servicesActiveDD,
-            sample: [customerDetailsSample.servicesActive]
+            sample: [ 'sms' ]
         },
         lastSuccessfulLogin: {
             dataDD: DateTimeDD,
-            sample: [customerDetailsSample.lastSuccessfulLogin]
+            sample: [ '30/03/2022 08:04:55' ]
         }
     }
 }

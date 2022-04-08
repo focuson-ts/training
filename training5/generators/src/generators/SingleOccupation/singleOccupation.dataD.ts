@@ -1,6 +1,5 @@
 import { TrainingDataD, TrainingRepeatingD } from "../common";
 import { DateDD, IntegerDD, LabelAndDropDownCD, LayoutCd, OneLineStringDD, StringDD, StringPrimitiveDD, TableCD } from "@focuson/forms";
-import { additionalInfoFirstSample, additionalInfoSecondSample, occupationAndIncomeSample } from "./singleOccupation.sample";
 import { CustomerStatus, EmploymentType, HowOften, YesNo } from "../../formComponents/enums";
 
 export const yesNoDD: StringPrimitiveDD = {
@@ -38,10 +37,10 @@ export const otherIncomeResponseDD: TrainingDataD = {
     name: "OtherIncomeResponse",
     description: "This is a summary about other income data of a single record",
     structure: {
-        clientOtherIncomeSeq: { dataDD: StringDD, sample: ['1', '2', '3'] },
-        otherIncomeType: { dataDD: StringDD, sample: [''] },
-        incomeFreqRef: { dataDD: frequencyDD, sample: [''] },
-        amount: { dataDD: IntegerDD }
+        clientOtherIncomeSeq: { dataDD: StringDD, sample: ['1', '2'] },
+        otherIncomeType: { dataDD: StringDD, sample: [ 'someTypeOne', 'someTypeTwo' ] },
+        incomeFreqRef: { dataDD: frequencyDD, sample: [ HowOften[1], HowOften[2] ] },
+        amount: { dataDD: IntegerDD, sample: [ '1000', '2000' ] }
     }
 }
 export const otherSourcesOfIncomeDataDD: TrainingRepeatingD = {
@@ -51,38 +50,25 @@ export const otherSourcesOfIncomeDataDD: TrainingRepeatingD = {
     description: "This is a summary about other income data",
     displayParams: { order: [ 'otherIncomeType', 'incomeFreqRef', 'amount' ]  },
     dataDD: otherIncomeResponseDD,
-    sampleCount: 3
+    sampleCount: 2
 }
 /* ---------------- OTHER SOURCES OF INCOME DD END ---------------- */
 
 /* ---------------- ADDITIONAL INFO SECOND DD START ---------------- */
-export const businessDetailsDD: TrainingDataD = {
-    name: 'BusinessDetails',
-    description: 'This is a summary about business details data',
-    structure: {
-        applicantName: { dataDD: StringDD, sample: [additionalInfoSecondSample.businessDetails.applicantName] },
-        businessName: { dataDD: StringDD, sample: [additionalInfoSecondSample.businessDetails.businessName] },
-        addressLine1: { dataDD: OneLineStringDD, sample: [additionalInfoSecondSample.businessDetails.addressLine1] },
-        addressLine2: { dataDD: OneLineStringDD, sample: [additionalInfoSecondSample.businessDetails.addressLine2] },
-        addressLine3: { dataDD: OneLineStringDD, sample: [additionalInfoSecondSample.businessDetails.addressLine3] },
-        addressLine4: { dataDD: OneLineStringDD, sample: [additionalInfoSecondSample.businessDetails.addressLine4] },
-        postcode: { dataDD: StringDD, sample: [additionalInfoSecondSample.businessDetails.postcode] }
-    }
-}
 export const additionalInfoSecondDD: TrainingDataD = {
     name: 'AdditionalInfoSecond',
     description: 'This is a summary about business details information data',
     structure: {
-        turnoverLastYear: { dataDD: StringDD, sample: [additionalInfoSecondSample.businessFinancialDetails.turnoverLastYear] },
-        turnoverPenultimateYear: { dataDD: StringDD, sample: [additionalInfoSecondSample.businessFinancialDetails.turnoverPenultimateYear] },
-        netProfitLastYear: { dataDD: StringDD, sample: [additionalInfoSecondSample.businessFinancialDetails.netProfitLastYear] },
-        netProfitPenultimateYear: { dataDD: StringDD, sample: [additionalInfoSecondSample.businessFinancialDetails.netProfitPenultimateYear] },
-        drawingsLastYear: { dataDD: StringDD, sample: [additionalInfoSecondSample.businessFinancialDetails.drawingsLastYear] },
-        drawingsPenultimateYear: { dataDD: StringDD, sample: [additionalInfoSecondSample.businessFinancialDetails.drawingsPenultimateYear] },
-        dividendsLastYear: { dataDD: StringDD, sample: [additionalInfoSecondSample.businessFinancialDetails.dividendsLastYear] },
-        dividendsPenultimateYear: { dataDD: StringDD, sample: [additionalInfoSecondSample.businessFinancialDetails.dividendsPenultimateYear] },
-        netAssetsLastYear: { dataDD: StringDD, sample: [additionalInfoSecondSample.businessFinancialDetails.netAssetsLastYear] },
-        netAssetsPenultimateYear: { dataDD: StringDD, sample: [additionalInfoSecondSample.businessFinancialDetails.netAssetsPenultimateYear] },
+        turnoverLastYear: { dataDD: StringDD, sample: [ '10,000', '11,000' ] },
+        turnoverPenultimateYear: { dataDD: StringDD, sample: [ '11,000', '12,000' ] },
+        netProfitLastYear: { dataDD: StringDD, sample: [ '12,000', '13,000' ] },
+        netProfitPenultimateYear: { dataDD: StringDD, sample: [ '9,000', '10,000' ] },
+        drawingsLastYear: { dataDD: StringDD, sample: [ '13,000', '14,000' ] },
+        drawingsPenultimateYear: { dataDD: StringDD, sample: [ '100,000', '110,000' ] },
+        dividendsLastYear: { dataDD: StringDD, sample: [ '15,000', '20,000' ] },
+        dividendsPenultimateYear: { dataDD: StringDD, sample: [ '3,000', '4,000' ] },
+        netAssetsLastYear: { dataDD: StringDD, sample: [ '1,000', '2,000' ] },
+        netAssetsPenultimateYear: { dataDD: StringDD, sample: [ '2,000', '3,000' ] },
     }
 }
 /* ---------------- ADDITIONAL INFO SECOND DD END ---------------- */
@@ -92,13 +78,13 @@ export const additionalInfoFirstDD: TrainingDataD = {
     name: 'AdditionalInfoFirst',
     description: 'This is a summary about first additional information data',
     structure: {
-        applicantName: { dataDD: StringDD, sample: [ additionalInfoFirstSample.applicantName ] },
-        employerName: { dataDD: StringDD, sample: [ additionalInfoFirstSample.employerName ] },
-        addressLine1: { dataDD: StringDD, sample: [ additionalInfoFirstSample.addressLine1 ] },
-        addressLine2: { dataDD: StringDD, sample: [ additionalInfoFirstSample.addressLine2 ] },
-        addressLine3: { dataDD: StringDD, sample: [ additionalInfoFirstSample.addressLine3 ] },
-        addressLine4: { dataDD: StringDD, sample: [ additionalInfoFirstSample.addressLine4 ] },
-        postcode: { dataDD: StringDD, sample: [ additionalInfoFirstSample.postcode ] },
+        applicantName: { dataDD: StringDD, sample: [ 'Mr XXXXXXXXXX ABCD Fred Bloggs', 'Mr YYYYYYYYY ABCD Fred Bloggs' ] },
+        employerName: { dataDD: StringDD, sample: [ 'AnalystXYZ', 'AnalystZZZ' ] },
+        addressLine1: { dataDD: StringDD, sample: [ 'Pinetrees Road', 'Cobalt Street' ] },
+        addressLine2: { dataDD: StringDD, sample: [ 'Norwich', 'Greenwithc' ] },
+        addressLine3: { dataDD: StringDD, sample: [ 'Norfolk', 'Nordah' ] },
+        addressLine4: { dataDD: StringDD, sample: [ 'Norfolkkk', 'Norfolyyyy' ] },
+        postcode: { dataDD: StringDD, sample: [ 'PLXYZ', 'YHFKLR' ] },
     }
 }
 /* ---------------- ADDITIONAL INFO FIRST DD END ---------------- */
@@ -108,8 +94,8 @@ export const listOccupationsDD: TrainingDataD = {
     name: "ListOccupations",
     description: "The search for occupation in the big list of occupations: occupation field ",
     structure: {
-        descTypeValue: { dataDD: StringDD, hidden: true, sample: ['W54'] },
-        descTypeName: { dataDD: StringDD, sample: ['Engineer'] },
+        descTypeValue: { dataDD: StringDD, hidden: true, sample: ['W54', 'W60'] },
+        descTypeName: { dataDD: StringDD, sample: ['Hair Dresser','Engineer'] },
     }
 }
 /* ---------------- LIST OCCUPATIONS DD END ---------------- */
@@ -128,25 +114,25 @@ export const oneOccupationIncomeDetailsDD: TrainingDataD = {
     },
     structure: {
         areYou: { dataDD: customerStatusDD, displayParams: { label: "Are you... ", buttons: ['additionalInfoFirst', 'additionalInfoSecond'] } },
-        occupation: { dataDD: StringDD, displayParams: { label: "What is your occupation? ", buttons: ['list'] }, guard: { areYou: [ 'E', 'S' ] }, sample: [ occupationAndIncomeSample.customerOccupationIncomeDetails.occupation ]  },
-        customerDescription: { dataDD: StringDD, displayParams: { label: "Customers description: " }, guard: { areYou: [ 'E', 'S' ] }, sample: [ occupationAndIncomeSample.customerOccupationIncomeDetails.customerDescription ] },
+        occupation: { dataDD: StringDD, displayParams: { label: "What is your occupation? ", buttons: ['list'] }, guard: { areYou: [ 'E', 'S' ] }, sample: [ 'Hair Dresser', 'Engineer' ]  },
+        customerDescription: { dataDD: StringDD, displayParams: { label: "Customers description: " }, guard: { areYou: [ 'E', 'S' ] }, sample: [ 'XXXXXXXXX', 'YYYYYYYYY' ] },
         ownShareOfTheCompany: { dataDD: yesNoDD, displayParams: { label: "Do you own a share of the company? " }, guard: { areYou: [ 'E' ] } },
         owningSharesPct: { dataDD: yesNoDD, displayParams: { label: "Is this 20% or more of it? " }, guard: { areYou: [ 'E' ], ownShareOfTheCompany: [ 'Y' ] } },
-        workFor: { dataDD: StringDD, displayParams: { label: "Who do you work for? " }, guard: { areYou: [ 'E' ], owningSharesPct: [ 'N' ] }, sample: [ occupationAndIncomeSample.customerOccupationIncomeDetails.workFor ] },
-        employmentType: { dataDD: employmentTypeDD, displayParams: { label: "Is this employment... " }, guard: { areYou: [ 'E' ], owningSharesPct: [ 'N' ] }, sample:  [ occupationAndIncomeSample.customerOccupationIncomeDetails.employmentType ] },
-        empStartDate: { dataDD: DateDD, displayParams: { label: "When did this employment start? (mm/yyyy) " }, guard: { areYou: [ 'E' ], employmentType: [ '1' ] }, sample: [ occupationAndIncomeSample.customerOccupationIncomeDetails.empStartDate ] },
-        empEndDate: { dataDD: DateDD, displayParams: { label: "When will it finish? (mm/yyyy) " }, guard: { areYou: [ 'E' ], employmentType: [ '2', '3' ] }, sample: [occupationAndIncomeSample.customerOccupationIncomeDetails.empEndDate] },
-        annualSalaryBeforeDeduction: { dataDD: IntegerDD, displayParams: { label: "What is your annual salary? (before deductions) " }, guard: { areYou: [ 'E' ], owningSharesPct: [ 'N' ] }, sample: [ occupationAndIncomeSample.customerOccupationIncomeDetails.annualSalaryBeforeDeduction ] },
-        annualIncomeExcludingRent: { dataDD: IntegerDD, displayParams: { label: "Do you have any other guaranteed annual income? (excluding rent) " }, guard: { areYou: [ 'E' ], owningSharesPct: [ 'N' ] }, sample: [ occupationAndIncomeSample.customerOccupationIncomeDetails.annualIncomeExcludingRent ] },
-        regularCommissionBonus: { dataDD: IntegerDD, displayParams: { label: "Do you have any regular commission, bonus or overtime? " }, guard: { areYou: [ 'E' ], owningSharesPct: [ 'N' ] }, sample: [ occupationAndIncomeSample.customerOccupationIncomeDetails.regularCommissionBonus ] },
-        whatTypeOfBusiness: { dataDD: StringDD, displayParams: { label: "What type of business is it? " }, guard: { areYou: [ 'E', 'S' ], owningSharesPct: [ 'Y' ] }, sample: [ occupationAndIncomeSample.customerOccupationIncomeDetails.whatTypeOfBusiness ] },
-        whatNameBusiness: { dataDD: StringDD, displayParams: { label: "What is its name: " }, guard: { areYou: [ 'E', 'S' ], owningSharesPct: [ 'Y' ] }, sample: [ occupationAndIncomeSample.customerOccupationIncomeDetails.whatNameBusiness ] },
-        establishedYear: { dataDD: StringDD, displayParams: { label: "When was it established? (MM/YYYY) " }, guard: { areYou: [ 'E', 'S' ], owningSharesPct: [ 'Y' ] }, sample: [ occupationAndIncomeSample.customerOccupationIncomeDetails.establishedYear ] },
-        annualDrawing3Yrs: { dataDD: IntegerDD, displayParams: { label: "What are your average annual drawings over the past 3 years? " }, guard: { areYou: [ 'E', 'S' ], owningSharesPct: [ 'Y' ] }, sample: [ occupationAndIncomeSample.customerOccupationIncomeDetails.annualDrawing3Yrs ] },
+        workFor: { dataDD: StringDD, displayParams: { label: "Who do you work for? " }, guard: { areYou: [ 'E' ], owningSharesPct: [ 'N' ] }, sample: [ 'Hair Saloon', 'S.C. Bosch S.R.L.' ] },
+        employmentType: { dataDD: employmentTypeDD, displayParams: { label: "Is this employment... " }, guard: { areYou: [ 'E' ], owningSharesPct: [ 'N' ] } },
+        empStartDate: { dataDD: DateDD, displayParams: { label: "When did this employment start? (mm/yyyy) " }, guard: { areYou: [ 'E' ], employmentType: [ '1' ] }, sample: [ '10/2002', '10/2005' ] },
+        empEndDate: { dataDD: DateDD, displayParams: { label: "When will it finish? (mm/yyyy) " }, guard: { areYou: [ 'E' ], employmentType: [ '2', '3' ] }, sample: ['10/2010', '10/2020'] },
+        annualSalaryBeforeDeduction: { dataDD: IntegerDD, displayParams: { label: "What is your annual salary? (before deductions) " }, guard: { areYou: [ 'E' ], owningSharesPct: [ 'N' ] }, sample: [ '20315', '20330' ] },
+        annualIncomeExcludingRent: { dataDD: IntegerDD, displayParams: { label: "Do you have any other guaranteed annual income? (excluding rent) " }, guard: { areYou: [ 'E' ], owningSharesPct: [ 'N' ] }, sample: [ '13255', '13252' ] },
+        regularCommissionBonus: { dataDD: IntegerDD, displayParams: { label: "Do you have any regular commission, bonus or overtime? " }, guard: { areYou: [ 'E' ], owningSharesPct: [ 'N' ] }, sample: [ '500', '1000' ] },
+        whatTypeOfBusiness: { dataDD: StringDD, displayParams: { label: "What type of business is it? " }, guard: { areYou: [ 'E', 'S' ], owningSharesPct: [ 'Y' ] }, sample: [ 'Saloon', 'Electrical Technical Support' ]   },
+        whatNameBusiness: { dataDD: StringDD, displayParams: { label: "What is its name: " }, guard: { areYou: [ 'E', 'S' ], owningSharesPct: [ 'Y' ] }, sample: [ 'XXXXXXXXX', 'YYYYYYYYY' ] },
+        establishedYear: { dataDD: StringDD, displayParams: { label: "When was it established? (MM/YYYY) " }, guard: { areYou: [ 'E', 'S' ], owningSharesPct: [ 'Y' ] }, sample: [ '10/2011', '11/2010' ] },
+        annualDrawing3Yrs: { dataDD: IntegerDD, displayParams: { label: "What are your average annual drawings over the past 3 years? " }, guard: { areYou: [ 'E', 'S' ], owningSharesPct: [ 'Y' ] }, sample: [ '100000', '200000' ] },
         otherSourceOfIncome: { dataDD: yesNoDD, displayParams: { label: "Do you have another sources of income (e.g. rental income) ? ", buttons: ['otherSourcesOfIncome'] }, },
-        createdBy: { dataDD: StringDD, displayParams: { label: "Entry created by: " }, sample: [ occupationAndIncomeSample.customerOccupationIncomeDetails.createdBy ] },
-        empEmploymentSeq: { dataDD: IntegerDD, hidden: true, sample: [occupationAndIncomeSample.customerOccupationIncomeDetails.empEmploymentSeq] },
-        accountantAppRoleSeq: { dataDD: IntegerDD, hidden: true, sample: [occupationAndIncomeSample.customerOccupationIncomeDetails.accountantAppRoleSeq] },
+        createdBy: { dataDD: StringDD, displayParams: { label: "Entry created by: " }, sample: [ 'Seras Alin', 'Seras Alin' ] },
+        empEmploymentSeq: { dataDD: IntegerDD, hidden: true, sample: [ '999998', '999999' ] },
+        accountantAppRoleSeq: { dataDD: IntegerDD, hidden: true, sample: [ '14648851', '14648852' ] },
     }
 }
 /* ---------------- ONE OCCUPATION INCOME DETAILS DD START ---------------- */
@@ -157,8 +143,8 @@ export const occupationAndIncomeFullDomainDD: TrainingDataD = {
     description: 'This is a summary about occupation and income details data',
     layout: { component: LayoutCd, displayParams: { details: '[[1,1],[30]]' }  },
     structure: {
-        mainCustomerName: { dataDD: StringDD, sample: [ occupationAndIncomeSample.mainCustomerName ] },
-        mainClientRef: { dataDD: IntegerDD, hidden: true, sample: [ occupationAndIncomeSample.mainClientRef ] },
+        mainCustomerName: { dataDD: StringDD, sample: [ 'Mr XXXXXXXXXX J ABCD Fred Bloggs', 'Mr YYYYYYYYY J ABCD Fred Bloggs' ] },
+        mainClientRef: { dataDD: IntegerDD, hidden: true, sample: [ '13606326', '13606329' ] },
         customerOccupationIncomeDetails: { dataDD: oneOccupationIncomeDetailsDD },
     }
 }
@@ -172,7 +158,7 @@ export const fromApiDD: TrainingDataD = {
         occupationAndIncome: { dataDD: occupationAndIncomeFullDomainDD },
         additionalInfoFirst: { dataDD: additionalInfoFirstDD },
         additionalInfoSecond: { dataDD: additionalInfoSecondDD },
-        otherSourcesOfIncome: { dataDD: otherIncomeResponseDD },
+        otherSourcesOfIncome: { dataDD: otherSourcesOfIncomeDataDD },
         occupationsList: { dataDD: listOccupationsDD }
     }
 }
