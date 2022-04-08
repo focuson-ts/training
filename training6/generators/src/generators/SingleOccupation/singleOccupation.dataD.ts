@@ -76,7 +76,8 @@ export const multipleOccupationsIncomeDetailsDD: TrainingRepeatingD = {
     name: "CustomerOccupationIncomeDetails",
     description: "This is a summary customer occupations data",
     displayParams: { index: [ 'selectedItem' ] , display: oneOccupationIncomeDetailsDD.name  },
-    dataDD: oneOccupationIncomeDetailsDD
+    dataDD: oneOccupationIncomeDetailsDD,
+    sampleCount: 2
 }
 /* ---------------- ONE OCCUPATION INCOME DETAILS DD START ---------------- */
 
