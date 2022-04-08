@@ -18,10 +18,19 @@
     "ls":                 {"description": "lists all the projects", "commands": ["js:process.cwd()"]},
     "ls-names":           {"description": "lists all the projects and their namse ", "commands": ["js:`${process.cwd().padEnd(50)} ${projectDetails.name}`"]},
     "clean":              {"description": "removes the dist directory", "commands": ["rm -rf dist", "rm -f .status", "rm -f .log", "rm -f .profile"]},
+    "ls-tsc":         {
+      "description": "lists projects that will be tsced",
+      "guard":       "${projectDetails.details.tsc}",
+      "commands":    ["js:process.cwd()"]
+    },
     "tsc":                {
       "guard":       "${projectDetails.details.tsc}",
       "description": "runs tsc",
       "commands":    [{"name": "tsc", "command": "tsc --noEmit false --outDir dist", "status": true}]
+    },
+    "tsc-noguard":            {
+      "description": "runs tsc without a guard",
+      "commands":    [{"name": "tsc-noguard", "command": "tsc --noEmit false --outDir dist", "status": true}]
     },
     "test":               {
       "description": "runs ${packageManager} test",

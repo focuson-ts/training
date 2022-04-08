@@ -7,7 +7,7 @@ export const addressViewModalPagePD: TrainingModalPage = {
     pageType: 'ModalPage',
     modes: [ 'edit' ],
     /** How we display the page.*/
-    display: { target: 'temp', dataDD: addressViewFullDomainDD, importFrom: 'AddressViewMainPage' },
+    display: { target: 'temp', dataDD: addressViewFullDomainDD},
     /** As well as displaying/editing the data we have these buttons. These are passed to layout */
     buttons: {
         cancel: { control: 'ModalCancelButton' },
