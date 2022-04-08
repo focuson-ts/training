@@ -8,7 +8,7 @@ export const editOccupationIncomeSummaryModalPD: TrainingModalPage = {
     name: 'OccupationIncomeModal',
     pageType: 'ModalPage',
     modes: [ 'view','create','edit' ],
-    display: { target: '~/tempForOccupationEdit', dataDD: oneOccupationIncomeDetailsDD, importFrom: 'MainOccupationDetailsPageSummary' },
+    display: { target: '~/tempForOccupationEdit', dataDD: oneOccupationIncomeDetailsDD },
     layout: { component: HideButtonsCD, displayParams: { hide: [ 'additionalInfoFirst', 'additionalInfoSecond', 'otherSourcesOfIncome', 'list' ] } },
     buttons: {
         cancel: { control: 'ModalCancelButton' },
