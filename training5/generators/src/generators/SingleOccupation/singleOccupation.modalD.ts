@@ -11,7 +11,7 @@ export const additionalInfoFirstModalPD: TrainingModalPage = {
     name: 'AdditionalInfoFirstModal',
     pageType: 'ModalPage',
     modes: [ 'edit' ],
-    display: { target: '~/tempForAdditionalInfoFirst', dataDD: additionalInfoFirstDD, importFrom: 'MainOccupationDetailsPageSummary' },
+    display: { target: '~/tempForAdditionalInfoFirst', dataDD: additionalInfoFirstDD },
     buttons: {
         cancel: { control: 'ModalCancelButton' },
         commit: { control: 'ModalCommitButton' }
@@ -22,7 +22,7 @@ export const additionalInfoSecondModalPD: TrainingModalPage = {
     name: 'AdditionalInfoSecondModal',
     pageType: 'ModalPage',
     modes: [ 'edit' ],
-    display: { target: '~/tempForAdditionalInfoSecond', dataDD: additionalInfoSecondDD, importFrom: 'MainOccupationDetailsPageSummary' },
+    display: { target: '~/tempForAdditionalInfoSecond', dataDD: additionalInfoSecondDD},
     buttons: {
         cancel: { control: 'ModalCancelButton' },
         commit: { control: 'ModalCommitButton' }
@@ -33,7 +33,7 @@ export const editOtherSourcesOfIncomeModalPD: TrainingModalPage = {
     name: 'OtherSourcesOfIncomeModal',
     pageType: 'ModalPopup',
     modes: [ 'edit' ],
-    display: { target: '~/tempForOtherSourcesOfIncome', dataDD: otherIncomeResponseDD, importFrom: 'MainOccupationDetailsPageSummary' },
+    display: { target: '~/tempForOtherSourcesOfIncome', dataDD: otherIncomeResponseDD},
     buttons: {
         cancel: { control: 'ModalCancelButton' },
         commit: { control: 'ModalCommitButton' }
@@ -44,7 +44,7 @@ export const listOccupationsModalPD: TrainingModalPage = {
     name: 'ListOccupationsModal',
     pageType: 'ModalPopup',
     modes: [ 'edit' ],
-    display: { target: '~/occupation', dataDD: listOccupationsDD, importFrom: 'MainOccupationDetailsPageSummary' },
+    display: { target: '~/occupation', dataDD: listOccupationsDD},
     buttons: {
         cancel: { control: 'ModalCancelButton' },
         commit: { control: 'ModalCommitButton' }
@@ -55,7 +55,7 @@ export const editOccupationIncomeSummaryModalPD: TrainingModalPage = {
     name: 'OccupationIncomeModal',
     pageType: 'ModalPage',
     modes: [ 'view', 'edit' ],
-    display: { target: '~/tempForOccupationEdit', dataDD: oneOccupationIncomeDetailsDD, importFrom: 'MainOccupationDetailsPageSummary' },
+    display: { target: '~/tempForOccupationEdit', dataDD: oneOccupationIncomeDetailsDD },
     layout: { component: HideButtonsCD, displayParams: { hide: [ 'additionalInfoFirst', 'additionalInfoSecond', 'otherSourcesOfIncome', 'list' ] } },
     buttons: {
         cancel: { control: 'ModalCancelButton' },
@@ -67,7 +67,7 @@ export const editOccupationIncomeSummaryModalPD: TrainingModalPage = {
                 copy: { from: '~/fromApi/additionalInfoFirst' },
                 copyOnClose: { to: '~/fromApi/additionalInfoFirst' } } },
         additionalInfoSecond: {
-            by: { condition: "equals", path: '/MainOccupationDetailsPageSummary/temp/areYou', value: `"S"` },
+            by: { condition: "equals", path: '/MainOccupationDetailsPageSummary/tempForOccupationEdit/areYou', value: `"S"` },
             guard: {
                 control: 'ModalButton', modal: additionalInfoSecondModalPD, mode: 'edit', focusOn: '~/tempForAdditionalInfoSecond',
                 copy: { from: '~/fromApi/additionalInfoSecond' },

@@ -6,7 +6,7 @@ export const HelloWorldPage: TrainingMainPage = {
     buttons: {},
     display: { target: '~/fromApi', dataDD: helloWorldDD },
     domain: { fromApi: { dataDD: helloWorldDD } },
-    initialValue: {},
+    initialValue: 'empty',
     modals: [],
     modes: ['view'],
     name: "HelloWorldMainPage",

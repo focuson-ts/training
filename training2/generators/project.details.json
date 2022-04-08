@@ -1,14 +1,17 @@
 {
-  "template": "training",
-  "name": "@focuson/training2_generators",
+  "template":    "training",
+  "name":        "@focuson/training2_generators",
   "description": "Address view: fetching data from the api, and displaying it",
-  "details": {
-    "ideify": true,
-    "publish": false,
-    "generate": true,
-    "test": true,
-    "links": [],
-    "extraDeps": {},
-    "extraDevDeps": {}
+  "details":     {
+    "ideify":       true,
+    "publish":      false,
+    "generate":     true,
+    "test":         true,
+    "links":        [],
+    "extraDeps":    {},
+    "extraDevDeps": {},
+    "generator":    true,
+    "tsPort":       3002,
+    "javaPort":     8082
   }
 }
