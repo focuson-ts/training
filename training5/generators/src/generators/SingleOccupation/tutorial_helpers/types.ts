@@ -33,7 +33,7 @@ export interface single_occupation_type {
         },
         occupationsList: occupationsList
     },
-    tempForOccupationEdit: { /* occupationAndIncomeSample --> look there */  },
+    tempForOccupationEdit: { /* oneOccupationAndIncome */  },
     tempForAdditionalInfoFirst: { /* additionalInfoFirst */ },
     tempForAdditionalInfoSecond: { /* additionalInfoSecond */ },
 }

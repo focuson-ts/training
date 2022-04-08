@@ -109,6 +109,7 @@ export const oneOccupationIncomeDetailsDD: TrainingDataD = {
         createdBy: { dataDD: StringDD, displayParams: { label: "Entry created by: " }, sample: [ 'Seras Alin', 'Seras Alin' ] },
         empEmploymentSeq: { dataDD: IntegerDD, hidden: true, sample: [ 999998, 999999 ] },
         accountantAppRoleSeq: { dataDD: IntegerDD, hidden: true, sample: [ 14648851, 14648852 ] },
+        clientRef: { dataDD: IntegerDD, hidden: true, sample: [123, 345] }
     }
 }
 /* ---------------- ONE OCCUPATION INCOME DETAILS DD START ---------------- */

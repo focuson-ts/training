@@ -64,10 +64,10 @@ export const oneOccupationIncomeDetailsDD: TrainingDataD = {
         whatNameBusiness: { dataDD: StringDD, displayParams: { label: "What is its name: " }, guard: { areYou: [ 'E', 'S' ], owningSharesPct: [ 'Y' ] }, sample: [ 'XXXXXXXXX', 'YYYYYYYYY' ] },
         establishedYear: { dataDD: StringDD, displayParams: { label: "When was it established? (MM/YYYY) " }, guard: { areYou: [ 'E', 'S' ], owningSharesPct: [ 'Y' ] }, sample: [ '10/2011', '11/2010' ] },
         annualDrawing3Yrs: { dataDD: IntegerDD, displayParams: { label: "What are {~/mainOrJoint|your|their} average annual drawings over the past 3 years? " }, guard: { areYou: [ 'E', 'S' ], owningSharesPct: [ 'Y' ] }, sample: [ 100000, 200000 ] },
-        otherSourceOfIncome: { dataDD: yesNoDD, displayParams: { label: "Do {~/mainOrJoint|you|they} have another sources of income (e.g. rental income) ? " }, },
         createdBy: { dataDD: StringDD, displayParams: { label: "Entry created by: " }, sample: [ 'Seras Alin', 'Seras Alin' ] },
         empEmploymentSeq: { dataDD: IntegerDD, hidden: true, sample: [ 999998, 999999 ] },
         accountantAppRoleSeq: { dataDD: IntegerDD, hidden: true, sample: [ 1464885, 14648852 ] },
+        clientRef: { dataDD: IntegerDD, hidden: true, sample: [123, 345] },
     }
 }
 export const multipleOccupationsIncomeDetailsDD: TrainingRepeatingD = {
