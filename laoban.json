@@ -17,7 +17,7 @@
     },
     "ls":                 {"description": "lists all the projects", "commands": ["js:process.cwd()"]},
     "ls-names":           {"description": "lists all the projects and their namse ", "commands": ["js:`${process.cwd().padEnd(50)} ${projectDetails.name}`"]},
-    "clean":              {"description": "removes the dist directory", "commands": ["rm -rf dist", "rm -f .status", "rm -f .log", "rm -f .profile"]},
+    "clean":              {"description": "removes the dist directory", "commands": ["rmdir /Q /S  dist", "del /Q .status", "del /Q .log", "del /Q .profile"]},
     "ls-tsc":         {
       "description": "lists projects that will be tsced",
       "guard":       "${projectDetails.details.tsc}",
