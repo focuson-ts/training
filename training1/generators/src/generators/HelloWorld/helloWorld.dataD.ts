@@ -4,7 +4,7 @@ import { helloWorldTable } from "../tables";
 
 
 export const helloWorldDD: TrainingDataD = {
-    name: 'HelloWorldDomainData',
+    name: 'HelloWorld',
     description: 'This is a summary about hello world domain data',
     table:helloWorldTable,
     structure: { message: { dataDD: StringDD, db: 'message' ,displayParams: { label: 'Hello world example'}, sample: [ 'Greetings message !' ] } }
