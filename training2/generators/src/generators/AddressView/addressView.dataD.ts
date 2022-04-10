@@ -1,23 +1,19 @@
 import { TrainingDataD } from "../common";
-import { StringDD } from "@focuson/forms";
+import { LayoutCd, StringDD } from "@focuson/forms";
+import { addT } from "../tables";
 
 export const addressDD: TrainingDataD = {
-    name: "Address",
-    description: "This is a simple description about the data. ",
-    structure: {
-        addressLine1: { dataDD: StringDD, sample: [ 'str. XXXX' ], displayParams: { required: false } },
-        addressLine2: { dataDD: StringDD, sample: [ 'no. YYYY' ] },
-        addressLine3: { dataDD: StringDD, sample: [ 'Cluj-Napoca' ] },
-        addressLine4: { dataDD: StringDD, sample: [ 'Romania' ], displayParams: { required: false } },
-        postCode: { dataDD: StringDD, sample: [ 'XYZI' ] }
-    }
+  name: "Address",
+  description: "The address of a customer",
+  table: addT,
+  layout: {component: LayoutCd, displayParams: {details: "[[2,2,1]]"}},
+  structure: {
+    addressLine1: { dataDD: StringDD, db: 'aline1', sample: [ 'str. XXXX' ], displayParams: { required: false } },
+    addressLine2: { dataDD: StringDD, db: 'aline1', sample: [ 'no. YYYY' ] },
+    addressLine3: { dataDD: StringDD, db: 'aline1', sample: [ 'Cluj-Napoca' ] },
+    addressLine4: { dataDD: StringDD, db: 'aline1', sample: [ 'Romania' ], displayParams: { required: false } },
+    postCode: { dataDD: StringDD, db: 'aline1', sample: [ 'XYZI' ] }
+  }
 }
 
-export const addressViewFullDomainDD: TrainingDataD = {
-    name: "AddressViewFullDomain",
-    description: "This is a simple description about the data. ",
-    structure: {
-        address: { dataDD: addressDD }
-    }
-}
 
