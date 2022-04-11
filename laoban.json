@@ -88,14 +88,7 @@
       "description": "Runs the spring boot server (the jar must exist in /target...",
       "guard":       "${projectDetails.details.mvn}",
       "commands":    [
-        {"name": "run-java", "command": "java -jar  .\\target\\${projectDetails.details.name}-2.5.0.jar --server.port=${projectDetails.details.javaPort}"}
-      ]
-    },
-    "ls-api":             {
-      "description": "Lists the spring boot servers and their port",
-      "guard":       "${projectDetails.details.mvn}",
-      "commands":    [
-        {"name": "echo-java", "command": "echo java -jar  .\\target\\${projectDetails.details.name}-2.5.0.jar --server.port=${projectDetails.details.javaPort}"}
+        {"name": "run-java", "command": "mvn spring-boot:run"}
       ]
     },
     "run-react":          {
