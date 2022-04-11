@@ -6,7 +6,7 @@ export const addressDD: TrainingDataD = {
   name: "Address",
   description: "The address of a customer",
   table: addT,
-  layout: {component: LayoutCd, displayParams: {details: "[[2,2,1]]"}},
+  // layout: {component: LayoutCd, displayParams: {details: "[[2,2,1]]"}},
   structure: {
     addressLine1: { dataDD: StringDD, db: 'aline1', sample: [ 'str. XXXX' ], displayParams: { required: false } },
     addressLine2: { dataDD: StringDD, db: 'aline1', sample: [ 'no. YYYY' ] },

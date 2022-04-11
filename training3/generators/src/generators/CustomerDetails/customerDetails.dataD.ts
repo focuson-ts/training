@@ -20,7 +20,7 @@ export const servicesActiveDD: StringPrimitiveDD = {
 export const customerDetailsDD: TrainingDataD = {
     name: 'CustomerDetailsDomainData',
     description: 'Details about the customer',
-    layout: { component: LayoutCd, displayParams: { details: '[[4,4],[7]]' } },
+    // layout: { component: LayoutCd, displayParams: { details: '[[4,4],[7]]' } },
     structure: {
         title: {
             dataDD: titleDD,
