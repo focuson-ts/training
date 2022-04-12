@@ -2,7 +2,7 @@ import { CombinedParams, directorySpec, params, SimpleDisplayComp } from "@focus
 import { DirectorySpec, loadFile } from "@focuson/files";
 import { GenerateLogLevel } from "@focuson/utils";
 import process from "process";
-
+import { versionNumber } from "./localConfig";
 export const logLevel: GenerateLogLevel = 'detailed';
 export let javaOutputRoot = '../formJava'
 export const tsRoot = "../formTs"
@@ -30,6 +30,7 @@ console.log ( "JavaPort is", javaPort, "tsPort is", tsPort )
 export const devAppConfig = {
   javaPort,
   tsPort,
+  versionNumber,
   fetch: `fetchWithDelay ( 1, fetchWithPrefix ( 'http://localhost:${javaPort}', loggingFetchFn ) )`,
   combine: MyCombineCD,
   debug: { fetcherDebug: true, restDebug: false, selectedPageDebug: false, loadTreeDebug: false, showTracing: false, recordTrace: true }
