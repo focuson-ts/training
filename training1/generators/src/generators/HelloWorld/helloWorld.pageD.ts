@@ -5,11 +5,12 @@ import { helloWorldRD } from "./helloWorld.restD";
 export const HelloWorldPage: TrainingMainPage = {
   name: "HelloWorld",
   buttons: {},
-  display: { target: '~/fromApi', dataDD: helloWorldDD },
-  domain: { fromApi: { dataDD: helloWorldDD } },
-  initialValue: undefined,
+  display: { target: '~/main', dataDD: helloWorldDD },
+  domain: { main: { dataDD: helloWorldDD } },
+  initialValue: 'empty',
   modals: [],
-  modes: [ 'view' ],
+  modes: [ 'edit' ],
   pageType: "MainPage",
-  rest: { restDataRD: { rest: helloWorldRD, targetFromPath: '~/fromApi', fetcher: true } }
+  rest: {
+    restDataRD: { rest: helloWorldRD, targetFromPath: '~/main/fromApi', fetcher: true } }
 }
