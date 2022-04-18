@@ -9,10 +9,10 @@ export const addressDD: TrainingDataD = {
   // layout: {component: LayoutCd, displayParams: {details: "[[2,2,1]]"}},
   structure: {
     addressLine1: { dataDD: StringDD, db: 'aline1', sample: [ 'str. XXXX' ], displayParams: { required: false } },
-    addressLine2: { dataDD: StringDD, db: 'aline1', sample: [ 'no. YYYY' ] },
-    addressLine3: { dataDD: StringDD, db: 'aline1', sample: [ 'Cluj-Napoca' ] },
-    addressLine4: { dataDD: StringDD, db: 'aline1', sample: [ 'Romania' ], displayParams: { required: false } },
-    postCode: { dataDD: StringDD, db: 'aline1', sample: [ 'XYZI' ] }
+    addressLine2: { dataDD: StringDD, db: 'aline2', sample: [ 'no. YYYY' ], displayParams: { required: false } },
+    addressLine3: { dataDD: StringDD, db: 'aline3', sample: [ 'Cluj-Napoca' ] },
+    addressLine4: { dataDD: StringDD, db: 'aline4', sample: [ 'Romania' ], displayParams: { required: false } },
+    postCode: { dataDD: StringDD, db: 'postcode', sample: [ 'XYZI' ] }
   }
 }
 

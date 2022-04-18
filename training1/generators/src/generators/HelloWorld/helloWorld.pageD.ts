@@ -7,7 +7,7 @@ export const HelloWorldPage: TrainingMainPage = {
   buttons: {},
   display: { target: '~/fromApi', dataDD: helloWorldDD },
   domain: { fromApi: { dataDD: helloWorldDD } },
-  initialValue: 'empty',
+  initialValue:undefined,
   modals: [],
   modes: [ 'view' ],
   pageType: "MainPage",

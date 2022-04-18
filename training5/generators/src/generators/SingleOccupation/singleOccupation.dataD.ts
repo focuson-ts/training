@@ -118,7 +118,7 @@ export const oneOccupationIncomeDetailsDD: TrainingDataD = {
 export const occupationAndIncomeFullDomainDD: TrainingDataD = {
     name: 'OccupationAndIncomeFullDomain',
     description: 'This is a summary about occupation and income details data',
-    layout: { component: LayoutCd, displayParams: { details: '[[1,1],[30]]' }  },
+    // layout: { component: LayoutCd, displayParams: { details: '[[1,1],[30]]' }  },
     structure: {
         mainCustomerName: { dataDD: StringDD, sample: [ 'Mr XXXXXXXXXX J ABCD Fred Bloggs', 'Mr YYYYYYYYY J ABCD Fred Bloggs' ] },
         mainClientRef: { dataDD: IntegerDD, hidden: true, sample: [ 13606326, 13606329 ] },
