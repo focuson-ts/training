@@ -1,14 +1,16 @@
 {
-  "template": "training",
-  "name": "@focuson/training6_multipleoccupations",
+  "template":    "training",
+  "name":        "@focuson/training6_multipleoccupations",
   "description": "Search",
-  "details": {
-    "ideify": true,
-    "publish": false,
-    "generate": true,
-    "test": true,
-    "links": [],
-    "extraDeps": {},
+  "details":     {
+    "ideify":       true,
+    "publish":      false,
+    "generate":     true,
+    "test":         true,
+    "links":        [],
+    "tsPort":       3006,
+    "javaPort":     8086,
+    "extraDeps":    {},
     "extraDevDeps": {}
   }
 }

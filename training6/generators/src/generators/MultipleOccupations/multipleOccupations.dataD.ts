@@ -38,7 +38,7 @@ export const SelectedItemCD: DisplayCompD = {
 
 /* ---------------- MULTIPLE OCCUPATION INCOME DETAILS DD START ---------------- */
 export const oneOccupationIncomeDetailsDD: TrainingDataD = {
-    name: "MultipleOccupationsIncomeDetailsDD",
+    name: "MultipleOccupationsIncomeDetails",
     description: "This is a summary about occupation income details data of a multiple occupations",
     layout: { component: LayoutCd, displayParams: { details:  '[[30]]' , title:  ['Current employment details - '] } },
     guards: {

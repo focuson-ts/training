@@ -41,9 +41,9 @@ export const MainOccupationDetailsPageSummaryPD: TrainingMainPage = {
             copy: { from: '~/fromApi/occupationAndIncome/customerOccupationIncomeDetails' },
             copyOnClose: { to: '~/fromApi/occupationAndIncome/customerOccupationIncomeDetails' }
         },
-        mainOrJoint: { control: "ToggleButton", value: 'mainOrJoint', buttonText: 'Showing {~/mainOrJoint|Main|Joint}' },
-        nextOccupation: { control: 'ListNextButton', value: 'selectedItem', list: '~/fromApi/occupationAndIncome/customerOccupationIncomeDetails' },
-        prevOccupation: { control: 'ListPrevButton', value: 'selectedItem', list: '~/fromApi/occupationAndIncome/customerOccupationIncomeDetails' },
+        mainOrJoint: { control: "ToggleButton", value: '~/mainOrJoint', buttonText: 'Showing {~/mainOrJoint|Main|Joint}' },
+        nextOccupation: { control: 'ListNextButton', value: '~/selectedItem', list: '~/fromApi/occupationAndIncome/customerOccupationIncomeDetails' },
+        prevOccupation: { control: 'ListPrevButton', value: '~/selectedItem', list: '~/fromApi/occupationAndIncome/customerOccupationIncomeDetails' },
         addEntry: {
             control: 'ModalButton', modal: editOccupationIncomeSummaryModalPD, mode: 'create', focusOn: '~/tempForOccupationEdit',
             restOnCommit: { restName: 'occupationAndIncomeRD',  action: 'create', result: 'refresh'},
