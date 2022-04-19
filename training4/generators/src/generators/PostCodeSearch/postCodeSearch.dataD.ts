@@ -1,4 +1,4 @@
-import { DataD, OneLineStringDD, RepeatingDataD, TableCD } from "@focuson/forms";
+import {DataD, LayoutCd, OneLineStringDD, RepeatingDataD, TableCD} from "@focuson/forms";
 import { AllGuards } from "@focuson/forms/dist/src/buttons/guardButton";
 
 export const postCodeDataLineD: DataD<AllGuards> = {
@@ -37,6 +37,8 @@ export const postCodeSearchDataD: DataD<AllGuards> = {
 export const nameAndAddressDataD: DataD<AllGuards> = {
   name: "PostCodeMainPage",
   description: "An address that the Postcode data needs to be formComponents to",
+  // layout: { component: LayoutCd, displayParams: { details: '[[3,3],[7]]' } },
+  // layout: { component: LayoutCd, displayParams: { details: '[[{"count": 1, "labelWidth": 10}],[2,2],[{"count": 2, "labelWidth": 10}]]', defaultProps: '{"labelWidth": 20}' } },
   structure: {
     name: { dataDD: OneLineStringDD },
     ...postCodeDataLineD.structure,
