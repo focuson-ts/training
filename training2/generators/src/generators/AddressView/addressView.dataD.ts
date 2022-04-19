@@ -7,6 +7,8 @@ export const addressDD: TrainingDataD = {
   description: "The address of a customer",
   table: addT,
   // layout: {component: LayoutCd, displayParams: {details: "[[2,2,1]]"}},
+  // layout: {component: LayoutCd, displayParams: {details: "[[4,1]]"}}, //default labelWidth:35%, valueWidth: remaining%
+  // layout: {component: LayoutCd, displayParams: {details: "[[4,1]]", defaultProps: `{"labelWidth": 20}`}}, //override default labelWidth:20%, valueWidth: remaining%
   structure: {
     addressLine1: { dataDD: StringDD, db: 'aline1', sample: [ 'str. XXXX' ], displayParams: { required: false } },
     addressLine2: { dataDD: StringDD, db: 'aline2', sample: [ 'no. YYYY' ], displayParams: { required: false } },
