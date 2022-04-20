@@ -21,6 +21,8 @@ export const customerDetailsDD: TrainingDataD = {
     name: 'CustomerDetailsDomainData',
     description: 'Details about the customer',
     // layout: { component: LayoutCd, displayParams: { details: '[[4,4],[7]]' } },
+    // layout: { component: LayoutCd, displayParams: { details: '[[4,2],[2],[7]]' } },
+    // layout: { component: LayoutCd, displayParams: { details: '[[2,{"count": 2, "labelWidth": 25, "valueWidth": 40},{"count": 2, "valueWidth": 70}],[7]]' } },
     structure: {
         title: {
             dataDD: titleDD,
