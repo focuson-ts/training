@@ -1,6 +1,8 @@
 import {commonParams, TrainingDataD, TrainingRepeatingD} from "../common";
-import { DateDD,
-    DisplayCompD, IntegerDD, LabelAndDropDownCD, LayoutCd, OneLineStringDD, StringDD, StringPrimitiveDD } from "@focuson/forms";
+import {
+    DateDD,
+    DisplayCompD, IntegerDD, LabelAndDropDownCD, LayoutCd, OneLineStringDD, SelectedItemCD, StringDD, StringPrimitiveDD
+} from "@focuson/forms";
 import { CustomerStatus, EmploymentType, HowOften, YesNo } from "../../formComponents/enums";
 
 export const yesNoDD: StringPrimitiveDD = {
@@ -23,17 +25,6 @@ export const employmentTypeDD: StringPrimitiveDD = {
     description: "Employment contract type",
     display: LabelAndDropDownCD,
     enum: EmploymentType
-}
-
-export const SelectedItemCD: DisplayCompD = {
-    import: '../formComponents/table',
-    name: "SelectedItem",
-    params: {
-        ...commonParams,
-        index: { paramType: 'pageStateValue', needed: 'yes' },
-        display: { paramType: 'object', needed: 'yes' },
-        buttons: { paramType: 'object', needed: 'defaultToButtons' }
-    }
 }
 
 /* ---------------- MULTIPLE OCCUPATION INCOME DETAILS DD START ---------------- */

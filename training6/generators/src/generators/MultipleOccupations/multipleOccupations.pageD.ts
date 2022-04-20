@@ -8,7 +8,10 @@ import {
     multipleOccupationsIncomeDetailsDD, oneOccupationIncomeDetailsDD,
 } from "./multipleOccupations.dataD";
 import { occupationAndIncomeRD } from "./multipleOccupations.restD";
-import { HideButtonsCD } from "@focuson/forms";
+import {BooleanDD, HideButtonsCD, IntegerDD} from "@focuson/forms";
+import {
+    listOccupationsDD
+} from "@focuson/training5_single_occupation/src/generators/SingleOccupation/singleOccupation.dataD";
 
 export const MainOccupationDetailsPageSummaryPD: TrainingMainPage = {
     name: 'MainOccupationDetailsPageSummary',
@@ -19,15 +22,20 @@ export const MainOccupationDetailsPageSummaryPD: TrainingMainPage = {
     ],
     display: { target: '~/fromApi/occupationAndIncome', dataDD: occupationAndIncomeFullDomainDD },
     initialValue: {
+        selectedItem: 0,
         occupation: {
             search: '',
             selectedOccupationName: '',
             searchResults: [],
         },
+        mainOrJoint: false
     },
     domain: {
+        selectedItem: { dataDD: IntegerDD },
         fromApi: { dataDD: fromApiDD },
-        tempForOccupationEdit: { dataDD: multipleOccupationsIncomeDetailsDD }
+        tempForOccupationEdit: { dataDD: multipleOccupationsIncomeDetailsDD },
+        mainOrJoint: { dataDD: BooleanDD },
+        searchList: { dataDD: listOccupationsDD },
     },
     rest: {
         occupationAndIncomeRD: { rest: occupationAndIncomeRD, targetFromPath: '~/fromApi/occupationAndIncome', fetcher: true }
@@ -49,8 +57,7 @@ export const MainOccupationDetailsPageSummaryPD: TrainingMainPage = {
             restOnCommit: { restName: 'occupationAndIncomeRD',  action: 'create', result: 'refresh'},
             createEmpty: oneOccupationIncomeDetailsDD,
             setToLengthOnClose: { variable: '~/selectedItem', array: '~/fromApi/occupationAndIncome/customerOccupationIncomeDetails' },
-            // TODO copy on clone append ?
-            // copyOnClose: { to: ['~/fromApi/occupationAndIncomecustomerOccupationIncomeDetails', '[append]'] }
+            copyOnClose: { to: '~/fromApi/occupationAndIncome/customerOccupationIncomeDetails/[$append]' }
         },
     }
 }
