@@ -23,12 +23,17 @@ export const MainOccupationDetailsPageSummaryPD: TrainingMainPage = {
     display: { target: '~/fromApi/occupationAndIncome', dataDD: occupationAndIncomeFullDomainDD },
     initialValue: {
         selectedItem: 0,
-        occupation: {
-            search: '',
-            selectedOccupationName: '',
-            searchResults: [],
-        },
         mainOrJoint: false
+    },
+    variables: {
+        selected: {
+            constructedBy: 'code',
+            code: "id => id.focusQuery ( 'MainOccupationDetailsPageSummary' ).focusQuery ( 'selectedItem' )"
+        },
+        currentOccupation: {
+            constructedBy: 'code',
+            code: `id => id.focusQuery ( 'MainOccupationDetailsPageSummary' ).focusQuery ( 'fromApi' ).focusQuery ( 'occupationAndIncome' ).focusQuery ( 'customerOccupationIncomeDetails' )`
+        },
     },
     domain: {
         selectedItem: { dataDD: IntegerDD },
@@ -42,16 +47,15 @@ export const MainOccupationDetailsPageSummaryPD: TrainingMainPage = {
     },
     layout: { component: HideButtonsCD, displayParams: { hide: [ 'additionalInfoFirst', 'additionalInfoSecond', 'otherSourcesOfIncome', 'list' ] } },
     buttons: {
-        // TODO rest on commit
         edit: {
             control: 'ModalButton', modal: editOccupationIncomeSummaryModalPD, mode: 'edit',
-            focusOn: '~/tempForOccupationEdit',
-            copy: { from: '~/fromApi/occupationAndIncome/customerOccupationIncomeDetails' },
-            copyOnClose: { to: '~/fromApi/occupationAndIncome/customerOccupationIncomeDetails' }
+            focusOn: '~/temp',
+            copy: { from: '#currentOccupation[#selected]' },
+            copyOnClose: { to: '#currentOccupation[#selected]' }
         },
         mainOrJoint: { control: "ToggleButton", value: '~/mainOrJoint', buttonText: 'Showing {~/mainOrJoint|Main|Joint}' },
-        nextOccupation: { control: 'ListNextButton', value: '~/selectedItem', list: '~/fromApi/occupationAndIncome/customerOccupationIncomeDetails' },
-        prevOccupation: { control: 'ListPrevButton', value: '~/selectedItem', list: '~/fromApi/occupationAndIncome/customerOccupationIncomeDetails' },
+        nextOccupation: { control: 'ListNextButton', value: '#selected', list: '#currentOccupation' },
+        prevOccupation: { control: 'ListPrevButton', value: '#selected', list: '#currentOccupation' },
         addEntry: {
             control: 'ModalButton', modal: editOccupationIncomeSummaryModalPD, mode: 'create', focusOn: '~/tempForOccupationEdit',
             restOnCommit: { restName: 'occupationAndIncomeRD',  action: 'create', result: 'refresh'},
