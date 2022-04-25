@@ -8,8 +8,9 @@
     "generate":     true,
     "test":         true,
     "links":        [],
-    "tsPort":       3000,
-    "javaPort":     8080,
+    "tsPort":       3006,
+    "javaPort":     8086,
+    "generator":    true,
     "extraDeps":    {},
     "extraDevDeps": {}
   }

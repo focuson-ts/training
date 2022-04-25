@@ -5,5 +5,5 @@ import { MainOccupationDetailsPageSummaryPD } from "./generators/MultipleOccupat
 
 export const generatedPages: TrainingMainPage[] = [MainOccupationDetailsPageSummaryPD ];
 export const versionNumber = '0.0.1'
-const applicationName = 'AppName'
+const applicationName = 'Training6'
 export const javaAndTsParams: CombinedParams = { ...params, focusOnVersion, applicationName };
