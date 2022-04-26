@@ -46,6 +46,7 @@ export const MainOccupationDetailsPageSummaryPD: TrainingMainPage = {
         occupationAndIncomeRD: { rest: occupationAndIncomeRD, targetFromPath: '~/fromApi/occupationAndIncome', fetcher: true }
     },
     layout: { component: HideButtonsCD, displayParams: { hide: [ 'additionalInfoFirst', 'additionalInfoSecond', 'otherSourcesOfIncome', 'list' ] } },
+
     buttons: {
         edit: {
             control: 'ModalButton', modal: editOccupationIncomeSummaryModalPD, mode: 'edit',
