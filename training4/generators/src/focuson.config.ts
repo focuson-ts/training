@@ -15,9 +15,6 @@ export const directorySpecPointingAtNodeModules: DirectorySpec = {
   backup: (process.env[ 'yarn' ] ? '../../' : '') + 'node_modules/@focuson/forms'
 }
 
-export const focusOnVersion: string = JSON.parse ( loadFile ( 'package.json' ) ).dependencies[ "@focuson/forms" ]
-
-
 const details = JSON.parse ( loadFile ( 'project.details.json' ) ).details;
 export const javaPort = details.javaPort
 export const tsPort: number = details.tsPort

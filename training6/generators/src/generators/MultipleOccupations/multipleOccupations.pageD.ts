@@ -36,7 +36,8 @@ export const MainOccupationDetailsPageSummaryPD: TrainingMainPage = {
         },
     },
     domain: {
-        selectedItem: { dataDD: IntegerDD },
+        selectedItemForMain: { dataDD: IntegerDD },
+        selectedItemForJoin: { dataDD: IntegerDD },
         fromApi: { dataDD: fromApiDD },
         tempForOccupationEdit: { dataDD: multipleOccupationsIncomeDetailsDD },
         mainOrJoint: { dataDD: BooleanDD },
