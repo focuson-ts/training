@@ -14,13 +14,13 @@ export const helloWorldRD: TrainingRestD = {
   dataDD: helloWorldDD,
   url: '/helloWorld?{query}',
   actions: [ 'get' ],
-  initialSql: helloWorldSql,
-  tables: {
-    where: [
-      { table: helloWorldTable, alias: helloWorldTable.name, field: 'acc_id', paramName: 'clientRef' } ],
-    entity: {
-      type: 'Main',
-      table: helloWorldTable,
-    }
-  }
+  // initialSql: helloWorldSql,
+  // tables: {
+  //   where: [
+  //     { table: helloWorldTable, alias: helloWorldTable.name, field: 'acc_id', paramName: 'clientRef' } ],
+  //   entity: {
+  //     type: 'Main',
+  //     table: helloWorldTable,
+  //   }
+  // }
 }
