@@ -1,0 +1,17 @@
+{
+  "template":    "training",
+  "name":        "@focuson/training0_blanktemplate",
+  "description": "A blank template with no java backend",
+  "details":     {
+    "ideify":       true,
+    "publish":      false,
+    "generate":     true,
+    "test":         true,
+    "links":        [],
+    "extraDeps":    {},
+    "extraDevDeps": {},
+    "generator":    true,
+    "tsPort":       3000,
+    "javaPort":     8080
+  }
+}
