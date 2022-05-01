@@ -6,6 +6,6 @@ import { BlankProjectPD } from "./generators/HelloWorld/blank.pageD";
 
 export const generatedPages: TrainingMainPage[] = [ BlankProjectPD ];
 export const versionNumber = '0.0.1'
-const applicationName = 'Training1'
+const applicationName = 'Training0'
 export const focusOnVersion: string = JSON.parse ( loadFile ( 'package.json' ) ).dependencies[ "@focuson/forms" ]
 export const javaAndTsParams: CombinedParams = { ...params, focusOnVersion, applicationName };

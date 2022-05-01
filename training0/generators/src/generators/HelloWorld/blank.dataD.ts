@@ -1,9 +1,5 @@
 import { TrainingDataD } from "../common";
-import { LayoutCd, NatNumDd, numberPrimDD, NumberPrimitiveDD, StringDD } from "@focuson/forms";
-import { helloWorldTable } from "../tables";
-import { InputNumberCD, SortCodeLayoutCD } from "../components";
-
-
+import { LayoutCd, StringDD } from "@focuson/forms";
 
 
 export const blankDD: TrainingDataD = {
