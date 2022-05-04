@@ -11,7 +11,7 @@
     "extraDeps":    {},
     "extraDevDeps": {},
     "generator":    true,
-    "tsPort":       3000,
-    "javaPort":     8080
+    "tsPort":       2999,
+    "javaPort":     8079
   }
 }
