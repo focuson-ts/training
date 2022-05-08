@@ -1,0 +1,13 @@
+{
+  "template":    "dragons",
+  "name":        "@focuson/trainingDragon",
+  "description": "An example of why we use lens",
+  "details":     {
+    "ideify":       true,
+    "publish":      false,
+    "test":         true,
+    "links":        [],
+    "extraDeps":    {},
+    "extraDevDeps": {}
+  }
+}

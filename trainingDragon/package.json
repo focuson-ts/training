@@ -12,14 +12,14 @@
     ]
   },
   "dependencies": {
-    "@focuson/forms": "1.7.13",
+    "@focuson/forms": "1.7.12",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "typescript": "^4.1.5"
   },
-  "description": "Search",
+  "description": "An example of why we use lens",
   "devDependencies": {
-    "@focuson/stories": "1.7.13",
+    "@focuson/stories": "1.7.12",
     "fs-extra": "^10.0.1",
     "@types/fs-extra": "^9.0.13",
     "@types/jest": "^26.0.15",
@@ -66,17 +66,13 @@
       }
     ]
   },
-  "template": "training",
-  "name": "@focuson/training6_multipleoccupations",
+  "template": "dragons",
+  "name": "@focuson/trainingDragon",
   "details": {
     "ideify": true,
     "publish": false,
-    "generate": true,
     "test": true,
     "links": [],
-    "tsPort": 3006,
-    "javaPort": 8086,
-    "generator": true,
     "extraDeps": {},
     "extraDevDeps": {}
   }
