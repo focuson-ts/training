@@ -1330,106 +1330,106 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@focuson/fetcher@1.7.13":
-  version "1.7.13"
-  resolved "https://registry.yarnpkg.com/@focuson/fetcher/-/fetcher-1.7.13.tgz#b233f96d46871a76f4ae3fa77fa70fcd2ee11c43"
-  integrity sha512-HSAVGa0uWsMx3ponWlfNWZ6MtWD0x1w4jQqddtHByCtJTLuSruWNGBVaaJ9uhWqW+0QRIXCQe4s1fHrnzuJWeQ==
+"@focuson/fetcher@1.8.0":
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/@focuson/fetcher/-/fetcher-1.8.0.tgz#6d8aaf74c8c4f589a264c0f3f5a5c41acd7065af"
+  integrity sha512-I/z6obczNtYSF5/3JtfoOCUxetROCsDSh1YNI2yjDnGcx8pDufYJw2CZUUmdmldGktf8R/ZulR1NGTibpPaN0w==
   dependencies:
-    "@focuson/lens" "1.7.13"
-    "@focuson/state" "1.7.13"
-    "@focuson/template" "1.7.13"
+    "@focuson/lens" "1.8.0"
+    "@focuson/state" "1.8.0"
+    "@focuson/template" "1.8.0"
 
-"@focuson/files@1.7.13":
-  version "1.7.13"
-  resolved "https://registry.yarnpkg.com/@focuson/files/-/files-1.7.13.tgz#87aa98b37644b98b13ddf1466c0571ed177937f2"
-  integrity sha512-ImeJKRMOSJCGgNshCekhVNvv6bE63f1Dc8tEEGgr1nhtQg+cdiOHOHsC7b7h+ztkW0pwV/P7xKZddnC+KMee5w==
+"@focuson/files@1.8.0":
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/@focuson/files/-/files-1.8.0.tgz#7f518393387489a2a64970c5da8f91187a007764"
+  integrity sha512-VL5cLqG1wuvDUq57OBnOEeX3zTU/5+xAUpV0wzzmolaa+byl3f4Hrc+bebe85dym6XgLDWBniFNGpWU2FN0pAg==
   dependencies:
-    "@focuson/template" "1.7.13"
+    "@focuson/template" "1.8.0"
 
-"@focuson/focuson@1.7.13":
-  version "1.7.13"
-  resolved "https://registry.yarnpkg.com/@focuson/focuson/-/focuson-1.7.13.tgz#93f6f47258428c1431d56f09a226968de039913f"
-  integrity sha512-GbarhAW1saZpQE5zrYhsgbaH0u1SZi2XL1fEecM1vx+iiCURCryUmYfN18Nbp8pC2Q7GWFD83d2Ke2IzZ4tYaw==
+"@focuson/focuson@1.8.0":
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/@focuson/focuson/-/focuson-1.8.0.tgz#8c8362b69c6e5b8375b4998c8fc2326cb109fec4"
+  integrity sha512-jvh3MLC4nFqNtQJdhb1zEh02uZFVZ4BtJAAU953yRYH8h5b/+0JnRhxiWHeJ87RpCgp4g0grsO+DcIHqiaSozg==
   dependencies:
-    "@focuson/pages" "1.7.13"
-    "@focuson/poster" "1.7.13"
+    "@focuson/pages" "1.8.0"
+    "@focuson/poster" "1.8.0"
 
-"@focuson/form_components@1.7.13":
-  version "1.7.13"
-  resolved "https://registry.yarnpkg.com/@focuson/form_components/-/form_components-1.7.13.tgz#f8dd196b0eac0cbabf319f095fa32bfb5e5754d3"
-  integrity sha512-4vJTMUPtzg2kcFD5f7mKCzNIlLcpeUqEuA7oedqwB2tvCAgyLnfAoTteaaBoO2ZxHL+Ofh5GdhZesJ7xMswN7g==
+"@focuson/form_components@1.8.0":
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/@focuson/form_components/-/form_components-1.8.0.tgz#84230c811f74b7c6f1d5af6b86ec1227d3371e6f"
+  integrity sha512-M3emWn3zspPjFqTd//WTwokbznnrUyDA8DEWKRw7YMl/oZTAMeEKG6a//0ibgIiuQ8YWGL/+1QjnRNE5OoRxbA==
   dependencies:
-    "@focuson/focuson" "1.7.13"
-    "@focuson/state" "1.7.13"
+    "@focuson/focuson" "1.8.0"
+    "@focuson/state" "1.8.0"
 
-"@focuson/forms@1.7.13":
-  version "1.7.13"
-  resolved "https://registry.yarnpkg.com/@focuson/forms/-/forms-1.7.13.tgz#b5a43b08fe720c4e7ff419b7cb1c6c4448326362"
-  integrity sha512-0moGlTTtwJTkcNN1GZDGHseCwdMh6SpG6f6IVhoOGd3f4NdoCOz4WU9Vskei3Z3ar/rgYCaBkEDW27hl74+shg==
+"@focuson/forms@1.8.0":
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/@focuson/forms/-/forms-1.8.0.tgz#dbd8ec1f940633163196356ffba503c0fb4beffb"
+  integrity sha512-6g/8ncLnW5S8M6gqhKXxxOdWR/hcJTrtyhhZkDAX+yXRbZ3Ocsu2xmaCWvXx22FT3GvHUn5/lNFfIPHS7UPhEw==
   dependencies:
-    "@focuson/files" "1.7.13"
-    "@focuson/focuson" "1.7.13"
-    "@focuson/utils" "1.7.13"
+    "@focuson/files" "1.8.0"
+    "@focuson/focuson" "1.8.0"
+    "@focuson/utils" "1.8.0"
 
-"@focuson/lens@1.7.13":
-  version "1.7.13"
-  resolved "https://registry.yarnpkg.com/@focuson/lens/-/lens-1.7.13.tgz#1bb148d22fa2dc8ea79c0ba30a6816f15413cae0"
-  integrity sha512-DRjMO0/RwJOE0tK6w8yfT0lkIU33jQBOT30RCgUIdBFpJukvPm9CIRCnYhxZ+LrGG0oAy7V0Hew13WjgICJ0Fg==
+"@focuson/lens@1.8.0":
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/@focuson/lens/-/lens-1.8.0.tgz#ad48256fcae2a8f6525a8869a62e1f0e52f26c0f"
+  integrity sha512-yl4hFSdMu05uK5VIlCBFJLUMwxraoo9tyu4L+vRIaIYW9L6yEi6+jRErmMTAXRUL07IDd7ZkwCVy19wFrcIRLQ==
   dependencies:
-    "@focuson/utils" "1.7.13"
+    "@focuson/utils" "1.8.0"
 
-"@focuson/pages@1.7.13":
-  version "1.7.13"
-  resolved "https://registry.yarnpkg.com/@focuson/pages/-/pages-1.7.13.tgz#a96c31b18dfa8fb6dc6683865fc2342807ed6da9"
-  integrity sha512-NJZKfvJsQxLOqIGGeze9luyXeUrphicrsfNrCmT1Jk9xVu3WRSdc10nWLcaHU2aJfYgW9zGfNBIuyIg7pel49A==
+"@focuson/pages@1.8.0":
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/@focuson/pages/-/pages-1.8.0.tgz#1268dfaaf38d0f34244bd0f900a44a85271f8146"
+  integrity sha512-0l6pzbY7/9FiayA1gQ/o4vKCuQbLKGX9amxhB6dGUh+Oztm6EoruigS51NdNPemFf4+yuLkfEq51HK3jXwtvtQ==
   dependencies:
-    "@focuson/fetcher" "1.7.13"
-    "@focuson/lens" "1.7.13"
-    "@focuson/rest" "1.7.13"
-    "@focuson/state" "1.7.13"
+    "@focuson/fetcher" "1.8.0"
+    "@focuson/lens" "1.8.0"
+    "@focuson/rest" "1.8.0"
+    "@focuson/state" "1.8.0"
 
-"@focuson/poster@1.7.13":
-  version "1.7.13"
-  resolved "https://registry.yarnpkg.com/@focuson/poster/-/poster-1.7.13.tgz#11fb3504b018e17095505eaa8c6239ef430e9ba8"
-  integrity sha512-EOVU8U8d/TkCfLzro2FjDLItSS7ADKkZY2iAmTb1N49egmC7UZxpdxrr4ETTNrRMFhksP4sM/JqeAM+JDnNQxA==
+"@focuson/poster@1.8.0":
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/@focuson/poster/-/poster-1.8.0.tgz#ada5881916c2cd6ab2eda1226a6199724b2aee1d"
+  integrity sha512-XSTe1EFdYjr0L7USl7cdzqfxL2i3aaYTDscEgop2FKXMfXIrYIuLkNq4mrpxCskGz+VfJ+9Yo2DqZwi/3iDBTg==
   dependencies:
-    "@focuson/fetcher" "1.7.13"
-    "@focuson/lens" "1.7.13"
+    "@focuson/fetcher" "1.8.0"
+    "@focuson/lens" "1.8.0"
 
-"@focuson/rest@1.7.13":
-  version "1.7.13"
-  resolved "https://registry.yarnpkg.com/@focuson/rest/-/rest-1.7.13.tgz#e1cf8be10c01b52da7ba7665e52cae6d0fc7417f"
-  integrity sha512-hCqu7zsYmbT7ITqWxbIEp3MIR8KZtQPqiBP3bC8ZCUiwH4ZS9MGyCMTXE9GiQrY9y77k+amcuPASayEq88QNpg==
+"@focuson/rest@1.8.0":
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/@focuson/rest/-/rest-1.8.0.tgz#c9c0e8539c362270c7bce815ccc351f9c3d6eca7"
+  integrity sha512-pKbtGM9ceEfPHHj7TIY6XFGBN5oAWMmnsK48fHlycCdnbBYsyWPDaojYIMUDjxZsrSwj5nv9lVCeir1Duh965g==
   dependencies:
-    "@focuson/fetcher" "1.7.13"
-    "@focuson/lens" "1.7.13"
+    "@focuson/fetcher" "1.8.0"
+    "@focuson/lens" "1.8.0"
 
-"@focuson/state@1.7.13":
-  version "1.7.13"
-  resolved "https://registry.yarnpkg.com/@focuson/state/-/state-1.7.13.tgz#ac050ffd8a360cd07682cd9ab2c19a904ff2a386"
-  integrity sha512-OcOKDoDU8bZY+9xzHMJPnTJV1RBpsCLL7VCb23TtLzGiY7Pecq7QytV7ZBA4Vo3GcVnV2LSTUHHKjxT4MVpiFg==
+"@focuson/state@1.8.0":
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/@focuson/state/-/state-1.8.0.tgz#b8be823abc379fb9ac257fc1421220e1445ef318"
+  integrity sha512-ctkgiOIz5+kZl7ivWKfgpus9Ai1enLoACDFxQ++5oNTiKeb4KJWrvfLGWTSzta9iPSjEXSvxCi9t3adW1qmlgQ==
   dependencies:
-    "@focuson/lens" "1.7.13"
+    "@focuson/lens" "1.8.0"
 
-"@focuson/stories@1.7.13":
-  version "1.7.13"
-  resolved "https://registry.yarnpkg.com/@focuson/stories/-/stories-1.7.13.tgz#7057334fb20a5164070a01f58bb2ec774785900f"
-  integrity sha512-35Vw/HPcFGc3lkfBQcHnkP5f+oIXjPLccX2cVz8KNAC80rfJar8cBc9eH2SxZcniYodXXyfQnRtSyk+TAIlEIQ==
+"@focuson/stories@1.8.0":
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/@focuson/stories/-/stories-1.8.0.tgz#fa0ed6ac580fa3978a92420a2e6d72c19f1ffb39"
+  integrity sha512-GdMv/osy/EaitUTGzU+6syK9Gsmr6EeaTZjwSlCwRK94XbgUXJNTLf8qoGaKFYk1q9EpJl89nH+8CxZqITu5ow==
   dependencies:
-    "@focuson/focuson" "1.7.13"
+    "@focuson/focuson" "1.8.0"
     react "^17.0.1"
     react-dom "^17.0.1"
     typescript "^4.1.5"
 
-"@focuson/template@1.7.13":
-  version "1.7.13"
-  resolved "https://registry.yarnpkg.com/@focuson/template/-/template-1.7.13.tgz#db66c8e9377ec72460a4b1f02ba4c83a12cf790c"
-  integrity sha512-IHGmNy7aziaWOpQ+ILIu8wSLyLGz5MidiL9vFJlmgepkLwG6Dyaeney+RlitPySEFlygEd3S/fbqs57jW9mxeA==
+"@focuson/template@1.8.0":
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/@focuson/template/-/template-1.8.0.tgz#e26b03e5afa3e1bfefcd29988c9cd3af70da3987"
+  integrity sha512-afMkp+P9y41iLSyRAXWmLuvj4GZ+nmYRHR5KB8lUNd5Uc6/w1n6xfdlIkEh6n4PVgXEJ4FUvrtt/hx9TfA6RJw==
 
-"@focuson/utils@1.7.13":
-  version "1.7.13"
-  resolved "https://registry.yarnpkg.com/@focuson/utils/-/utils-1.7.13.tgz#1ab74c8d320340ff98e62ba2fd6ce6a2598c8a28"
-  integrity sha512-yxceznoLsKa/ZmUvYkexxKJWDG7d7/LxieWtC5Qqrb70xYBpxygs9PxXA+3jeG2CdOEweTlICcj+H4qnQPqICw==
+"@focuson/utils@1.8.0":
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/@focuson/utils/-/utils-1.8.0.tgz#1f067cbab7e557db7f631b65e4f7268938cf5650"
+  integrity sha512-KbUNzszvU4/Fy5u25BTpW7ytukeAn4N3KZJaBduc6T+mnm6ZK5uDQMT+XpMTHIz84arYzNPvg25VXpx7FMvtCQ==
   dependencies:
     node-fetch "2.6.1"
 
