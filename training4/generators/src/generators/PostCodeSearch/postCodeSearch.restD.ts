@@ -13,12 +13,24 @@ export const postcodeRestD: RestD<AllGuards> = {
   params: postcodeParams,
   dataDD: postCodeSearchResponse,
   url: '/api/postCode?{query}',
-  actions: [ 'get' ]
+  actions: [ 'get' ],
+  mutations: [
+    { restAction: 'get', mutateBy: { mutation: 'storedProc', schema: onlySchema, name: 'auditPostcodeSearch', params: [ 'postcode' ] } }
+  ]
+
 }
 
 export const addressRestD: RestD<AllGuards> = {
-  params: {...commonParams,...dbNameParams},
+  params: { ...commonParams, ...dbNameParams },
   dataDD: nameAndAddressDataD,
   url: '/api/address?{query}',
-  actions: [ 'create' ]
+  actions: [ 'create' ],
+  mutations: [
+    {
+      restAction: 'create', mutateBy: [
+        { mutation: 'storedProc', schema: onlySchema, name: 'findNextId', params: [ { type: 'output', name: 'id', javaType: 'Integer', sqlType: 'INTEGER' } ] },
+        { mutation: 'storedProc', schema: onlySchema, name: 'auditAddressCreate', params: [ 'id', 'body' ] },
+      ]
+    }
+  ]
 }
