@@ -1,7 +1,7 @@
 import { DBTable } from "@focuson/forms/dist/src/common/resolverD";
 import { onlySchema } from "@focuson/forms/dist/src/example/database/tableNames";
 import { NameAnd } from "@focuson/utils";
-import { CommonLensRestParam } from "@focuson/forms/dist/src/common/restD";
+import { CommonLensRestParam, StringParam } from "@focuson/forms/dist/src/common/restD";
 import { IntParam } from "@focuson/forms";
 
 export const helloWorldTable: DBTable = {
@@ -13,6 +13,6 @@ export const helloWorldTable: DBTable = {
 }
 
 
-export const dbNameParams: NameAnd<CommonLensRestParam> = {
-  dbName: { ...IntParam, commonLens: 'dbName', testValue: 'mock' }
+export const dbNameParams: NameAnd<CommonLensRestParam<any>> = {
+  dbName: { ...StringParam, commonLens: 'dbName', testValue: 'mock' }
 }

@@ -15,7 +15,7 @@ export const postcodeRestD: RestD<AllGuards> = {
   url: '/api/postCode?{query}',
   actions: [ 'get' ],
   mutations: [
-    { restAction: 'get', mutateBy: { mutation: 'storedProc', schema: onlySchema, name: 'auditPostcodeSearch', params: [ 'postcode' ] } }
+    { restAction: 'get', mutateBy: { type: 'storedProc', schema: onlySchema, name: 'auditPostcodeSearch', params: [ 'postcode' ] } }
   ]
 
 }
@@ -28,8 +28,8 @@ export const addressRestD: RestD<AllGuards> = {
   mutations: [
     {
       restAction: 'create', mutateBy: [
-        { mutation: 'storedProc', schema: onlySchema, name: 'findNextId', params: [ { type: 'output', name: 'id', javaType: 'Integer', sqlType: 'INTEGER' } ] },
-        { mutation: 'storedProc', schema: onlySchema, name: 'auditAddressCreate', params: [ 'id', 'body' ] },
+        { type: 'storedProc', schema: onlySchema, name: 'findNextId', params: [ { type: 'output', name: 'id', javaType: 'Integer', sqlType: 'INTEGER' } ] },
+        { type: 'storedProc', schema: onlySchema, name: 'auditAddressCreate', params: [ 'id', 'body' ] },
       ]
     }
   ]

@@ -6,7 +6,7 @@ import { dbNameParams, helloWorldTable } from "../tables";
 
 export const helloWorldParams: RestParams = {
   ...dbNameParams,
-  clientRef: { ...IntParam, commonLens: 'clientRef', testValue: '1' }
+  clientRef: { ...IntParam, commonLens: 'clientRef', testValue: 1 }
 }
 
 export const helloWorldRD: TrainingRestD = {
