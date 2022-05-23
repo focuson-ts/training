@@ -42,11 +42,11 @@ export const PaymentTypeDd: StringPrimitiveDD = {
 }
 
 export const commonParams: RestParams = {
-    vbAccountSeq: { ...IntParam, commonLens: 'vbAccountSeq', testValue: 123 },
-    vbAccountType: { ...IntParam, commonLens: 'vbAccountType', testValue: 234 },
-    brandRef: { ...IntParam, commonLens: 'brandRef', testValue: 7 },
-    accountSeq: { ...IntParam, commonLens: 'accountSeq', testValue: 555 },
-    applicationRef: { ...IntParam, commonLens: 'applicationRef', testValue: 666 },
-    clientRef: { ...IntParam, commonLens: 'clientRef', testValue: 32123 },
-    employmentSeq: { ...IntParam, commonLens: 'employmentSeq', testValue: 543444 }
+    vbAccountSeq: { ...IntParam, commonLens: 'vbAccountSeq', testValue: 'vbAccountSeq'},
+    vbAccountType: { ...IntParam, commonLens: 'vbAccountType', testValue: 'vbAccountType'},
+    brandRef: { ...IntParam, commonLens: 'brandRef', testValue: 'brandRef'},
+    accountSeq: { ...IntParam, commonLens: 'accountSeq', testValue: 'accountSeq' },
+    applicationRef: { ...IntParam, commonLens: 'applicationRef', testValue: 'applicationRef' },
+    clientRef: { ...IntParam, commonLens: 'clientRef', testValue: 'clientRef' },
+    employmentSeq: {...IntParam,  commonLens: 'employmentSeq', testValue: 'employmentSeq' }
 }
