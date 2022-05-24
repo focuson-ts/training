@@ -1,9 +1,6 @@
-import {commonParams, TrainingDataD, TrainingRepeatingD} from "../common";
-import {
-    DateDD,
-    DisplayCompD, IntegerDD, LabelAndDropDownCD, LayoutCd, OneLineStringDD, SelectedItemCD, StringDD, StringPrimitiveDD
-} from "@focuson/forms";
-import { CustomerStatus, EmploymentType, HowOften, YesNo } from "../../formComponents/enums";
+import { TrainingDataD, TrainingRepeatingD } from "../common";
+import { DateDD, IntegerDD, LabelAndDropDownCD, LayoutCd, OneLineStringDD, SelectedItemCD, StringDD, StringPrimitiveDD } from "@focuson/forms";
+import { CustomerStatus, EmploymentType, YesNo } from "../../formComponents/enums";
 
 export const yesNoDD: StringPrimitiveDD = {
     ...OneLineStringDD,

@@ -1,9 +1,10 @@
-import { DBTable } from "@focuson/forms/dist/src/common/resolverD";
-import { onlySchema } from "@focuson/forms/dist/src/example/database/tableNames";
+import { DBTable, Schema } from "@focuson/forms/dist/src/common/resolverD";
 import { NameAnd } from "@focuson/utils";
-import { CommonLensRestParam, StringParam } from "@focuson/forms/dist/src/common/restD";
-import { IntParam } from "@focuson/forms";
+import { CommonLensRestParam, StringParam } from "@focuson/forms";
 
+export const onlySchema: Schema = {
+  name: "TheSchema"
+}
 export const helloWorldTable: DBTable = {
   schema: onlySchema,
   name: 'HELLO_WORLD',

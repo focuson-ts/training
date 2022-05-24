@@ -1,8 +1,7 @@
 import { TrainingMainPage } from "../common";
 import { nameAndAddressDataD, postCodeSearchDataD } from "./postCodeSearch.dataD";
-import { IntegerDD } from "@focuson/forms";
+import { HideButtonsCD, IntegerDD } from "@focuson/forms";
 import { addressRestD, postcodeRestD } from "./postCodeSearch.restD";
-import { HideButtonsCD } from "@focuson/forms/dist/src/buttons/hideButtonsCD";
 import { postCodeModalPagePD } from "./postCodeSearch.modalPageD";
 
 export const postCodeMainPagePD: TrainingMainPage = {

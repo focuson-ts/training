@@ -1,4 +1,3 @@
-
 import { TrainingRestD } from "../common";
 import { IntParam, RestParams } from "@focuson/forms";
 import { dbNameParams } from "../tables";

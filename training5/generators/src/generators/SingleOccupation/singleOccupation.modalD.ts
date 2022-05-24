@@ -1,10 +1,6 @@
-import {TrainingModalPage} from "../common";
-import {
-    additionalInfoFirstDD,
-    additionalInfoSecondDD, listOccupationsDD,
-    oneOccupationIncomeDetailsDD
-} from "./singleOccupation.dataD";
-import {HideButtonsCD} from "@focuson/forms/dist/src/buttons/hideButtonsCD";
+import { TrainingModalPage } from "../common";
+import { additionalInfoFirstDD, additionalInfoSecondDD, listOccupationsDD, oneOccupationIncomeDetailsDD } from "./singleOccupation.dataD";
+import { HideButtonsCD } from "@focuson/forms";
 
 export const additionalInfoFirstModalPD: TrainingModalPage = {
     name: 'AdditionalInfoFirstModal',

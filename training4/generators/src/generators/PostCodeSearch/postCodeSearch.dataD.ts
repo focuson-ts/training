@@ -1,5 +1,4 @@
-import {DataD, LayoutCd, OneLineStringDD, RepeatingDataD, TableCD} from "@focuson/forms";
-import { AllGuards } from "@focuson/forms/dist/src/buttons/guardButton";
+import { AllGuards, DataD, OneLineStringDD, RepeatingDataD, TableCD } from "@focuson/forms";
 
 export const postCodeDataLineD: DataD<AllGuards> = {
   name: "PostCodeDataLine",

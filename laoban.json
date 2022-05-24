@@ -5,7 +5,7 @@
   "log":            ".log",
   "status":         ".status",
   "profile":        ".profile",
-  "packageManager": "npm",
+  "packageManager": "yarn",
   "scripts":        {
     "log":                {"description": "displays the log file", "commands": ["cat ${log}"]},
     "link":               {

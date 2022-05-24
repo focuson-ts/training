@@ -1,9 +1,7 @@
-import { RestD, RestParams, StringParam } from "@focuson/forms";
-import { AllGuards } from "@focuson/forms/dist/src/buttons/guardButton";
+import { AllGuards, RestD, RestParams, StringParam } from "@focuson/forms";
 import { nameAndAddressDataD, postCodeSearchResponse } from "./postCodeSearch.dataD";
-import { onlySchema } from "@focuson/forms/dist/src/example/database/tableNames";
-import { commonParams } from "../common";
-import { dbNameParams } from "../../../../../training0/generators/src/generators/tables";
+import { commonParams, dbNameParams, onlySchema } from "../common";
+
 
 export const postcodeParams: RestParams = {
   postcode: { ...StringParam, lens: '~/postcode/search', testValue: 'LW12 4RG' }

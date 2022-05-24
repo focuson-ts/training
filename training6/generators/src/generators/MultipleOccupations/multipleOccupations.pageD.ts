@@ -1,17 +1,10 @@
-import {TrainingMainPage} from "../common";
-import {
-    editOccupationIncomeSummaryModalPD
-} from "./multipleOccupations.modalD";
-import {
-    fromApiDD,
-    occupationAndIncomeFullDomainDD,
-    multipleOccupationsIncomeDetailsDD, oneOccupationIncomeDetailsDD,
-} from "./multipleOccupations.dataD";
+import { TrainingMainPage } from "../common";
+import { editOccupationIncomeSummaryModalPD } from "./multipleOccupations.modalD";
+import { fromApiDD, multipleOccupationsIncomeDetailsDD, occupationAndIncomeFullDomainDD, oneOccupationIncomeDetailsDD, } from "./multipleOccupations.dataD";
 import { occupationAndIncomeRD } from "./multipleOccupations.restD";
-import {BooleanDD, HideButtonsCD, IntegerDD} from "@focuson/forms";
-import {
-    listOccupationsDD
-} from "@focuson/training5_single_occupation/src/generators/SingleOccupation/singleOccupation.dataD";
+import { BooleanDD, HideButtonsCD, IntegerDD } from "@focuson/forms";
+import { listOccupationsDD } from "@focuson/training5_single_occupation/src/generators/SingleOccupation/singleOccupation.dataD";
+
 
 export const MainOccupationDetailsPageSummaryPD: TrainingMainPage = {
     name: 'MainOccupationDetailsPageSummary',
