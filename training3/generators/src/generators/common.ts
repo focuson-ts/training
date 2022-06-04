@@ -1,4 +1,5 @@
-import { AllButtonsInPage, AllGuards, DataD, IntParam, LabelAndDropDownCD, LabelAndNumberInputCD, MainPageD, ModalPageD, numberPrimDD, NumberPrimitiveDD, RepeatingDataD, RestD, RestParams, stringPrimDD, StringPrimitiveDD } from "@focuson/forms";
+import { AllButtonsInPage, AllGuards, CommonLensRestParam, DataD, IntParam, LabelAndDropDownCD, LabelAndNumberInputCD, MainPageD, ModalPageD, numberPrimDD, NumberPrimitiveDD, RepeatingDataD, RestD, RestParams, Schema, StringParam, stringPrimDD, StringPrimitiveDD } from "@focuson/forms";
+import { NameAnd } from "@focuson/utils";
 
 
 export type TrainingButtons = AllButtonsInPage<AllGuards>
@@ -34,4 +35,12 @@ export const commonParams: RestParams = {
     applicationRef: { ...IntParam, commonLens: 'applicationRef', testValue:5 },
     clientRef: { ...IntParam, commonLens: 'clientRef', testValue: 6666666 },
     employmentSeq: {...IntParam,  commonLens: 'employmentSeq', testValue:777777 }
+}
+
+export const dbNameParams: NameAnd<CommonLensRestParam<any>> = {
+    dbName: { ...StringParam, commonLens: 'dbName', testValue: 'mock' }
+}
+
+export const onlySchema: Schema = {
+    name: "TheSchema"
 }

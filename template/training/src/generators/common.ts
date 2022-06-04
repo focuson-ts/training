@@ -1,19 +1,5 @@
-import {
-    AllButtonsInPage,
-    DataD, IntParam,
-    LabelAndDropDownCD,
-    LabelAndNumberInputCD,
-    MainPageD,
-    ModalPageD,
-    numberPrimDD,
-    NumberPrimitiveDD,
-    RepeatingDataD,
-    RestD,
-    RestParams,
-    stringPrimDD,
-    StringPrimitiveDD
-} from "@focuson/forms";
-import { AllGuards } from "@focuson/forms/dist/src/buttons/guardButton";
+import { AllButtonsInPage, AllGuards, CommonLensRestParam, DataD, IntParam, LabelAndDropDownCD, LabelAndNumberInputCD, MainPageD, ModalPageD, numberPrimDD, NumberPrimitiveDD, RepeatingDataD, RestD, RestParams, Schema, StringParam, stringPrimDD, StringPrimitiveDD } from "@focuson/forms";
+import { NameAnd } from "@focuson/utils";
 
 
 export type TrainingButtons = AllButtonsInPage<AllGuards>
@@ -42,11 +28,19 @@ export const PaymentTypeDd: StringPrimitiveDD = {
 }
 
 export const commonParams: RestParams = {
-    vbAccountSeq: { ...IntParam, commonLens: 'vbAccountSeq', testValue: 'vbAccountSeq'},
-    vbAccountType: { ...IntParam, commonLens: 'vbAccountType', testValue: 'vbAccountType'},
-    brandRef: { ...IntParam, commonLens: 'brandRef', testValue: 'brandRef'},
-    accountSeq: { ...IntParam, commonLens: 'accountSeq', testValue: 'accountSeq' },
-    applicationRef: { ...IntParam, commonLens: 'applicationRef', testValue: 'applicationRef' },
-    clientRef: { ...IntParam, commonLens: 'clientRef', testValue: 'clientRef' },
-    employmentSeq: {...IntParam,  commonLens: 'employmentSeq', testValue: 'employmentSeq' }
+    vbAccountSeq: { ...IntParam, commonLens: 'vbAccountSeq', testValue: 11111111},
+    vbAccountType: { ...IntParam, commonLens: 'vbAccountType', testValue: 2},
+    brandRef: { ...IntParam, commonLens: 'brandRef', testValue: 3},
+    accountSeq: { ...IntParam, commonLens: 'accountSeq', testValue:4444444},
+    applicationRef: { ...IntParam, commonLens: 'applicationRef', testValue:5 },
+    clientRef: { ...IntParam, commonLens: 'clientRef', testValue: 6666666 },
+    employmentSeq: {...IntParam,  commonLens: 'employmentSeq', testValue:777777 }
+}
+
+export const dbNameParams: NameAnd<CommonLensRestParam<any>> = {
+    dbName: { ...StringParam, commonLens: 'dbName', testValue: 'mock' }
+}
+
+export const onlySchema: Schema = {
+    name: "TheSchema"
 }
