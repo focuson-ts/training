@@ -1,17 +1,25 @@
 import { TrainingRestD } from "../common";
-import { IntParam, RestParams } from "@focuson/forms";
+import { RestParams, StringParam } from "@focuson/forms";
 import { dbNameParams } from "../tables";
-import { blankDD } from "./blank.dataD";
+import { mandateDetailsDD, mandateDetailsTable, scratchPadDD } from "./blank.dataD";
 
 export const blankParams: RestParams = {
   ...dbNameParams,
-  clientRef: { ...IntParam, commonLens: 'clientRef', testValue: '1' }
+
 }
 
-export const sampleRd: TrainingRestD = {
-  params: blankParams,
-  dataDD: blankDD,
-  url: '/helloWorld?{query}',
+export const mandateSearchRD: TrainingRestD = {
+  params: {...blankParams, mandateRef: { ...StringParam, lens: '~/mandateSearch/mandateRef', testValue: '1' }},
+  dataDD: mandateDetailsTable,
+  url: '/api/mandateSearch?{query}',
   actions: [ 'get' ],
+
+}
+
+export const scratchPadRD: TrainingRestD = {
+  params: blankParams,
+  dataDD: scratchPadDD,
+  url: '/api/scratchpade?{query}',
+  actions: [ 'get', 'update' ],
 
 }
