@@ -30,5 +30,5 @@ export const devAppConfig = {
   versionNumber,
   fetch: `fetchWithDelay ( 1, fetchWithPrefix ( 'http://localhost:${javaPort}', loggingFetchFn ) )`,
   combine: MyCombineCD,
-  debug: { fetcherDebug: false, restDebug: false, selectedPageDebug: false, loadTreeDebug: false, showTracing: false, recordTrace: true , guardDebug: false}
+  debug: { fetcherDebug: false, restDebug: false, selectedPageDebug: false, loadTreeDebug: false, showTracing: false, recordTrace: true , guardDebug: false, validityDebug: true}
 }

@@ -28,7 +28,7 @@ export const listOccupationsModalPD: TrainingModalPage = {
     name: 'ListOccupationsModal',
     pageType: 'ModalPopup',
     modes: [ 'edit' ],
-    display: { target: '~/occupation', dataDD: listOccupationsDD},
+    display: { target: '~/occupationsList', dataDD: listOccupationsDD},
     buttons: {
         cancel: { control: 'ModalCancelButton' },
         commit: { control: 'ModalCommitButton' }
@@ -58,7 +58,7 @@ export const editOccupationIncomeSummaryModalPD: TrainingModalPage = {
                 copyOnClose: { to: '~/fromApi/additionalInfoSecond' } } },
         list: {
             control: 'ModalButton', modal: listOccupationsModalPD, mode: 'edit',
-            focusOn: '~/fromApi/occupation',
+            focusOn: '~/fromApi/occupationsList',
             copy: [
                 { from: '~/fromApi/occupationAndIncome/customerOccupationIncomeDetails/occupation', to: '~/fromApi/occupation/search' },
                 { from: '~/fromApi/occupationAndIncome/customerOccupationIncomeDetails/occupation', to: '~/fromApi/occupation/selectedOccupationName' },

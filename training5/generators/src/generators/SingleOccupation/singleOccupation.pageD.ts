@@ -5,7 +5,7 @@ import {
 } from "./singleOccupation.modalD";
 import {
     additionalInfoFirstDD, additionalInfoSecondDD,
-    fromApiDD,
+    fromApiDD, listOccupationsDD,
     occupationAndIncomeFullDomainDD,
     oneOccupationIncomeDetailsDD,
 } from "./singleOccupation.dataD";
@@ -37,6 +37,7 @@ export const MainOccupationDetailsPageSummaryPD: TrainingMainPage = {
     },
     domain: {
         fromApi: { dataDD: fromApiDD },
+        occupationsList: {dataDD: listOccupationsDD},
         tempForOccupationEdit: { dataDD: oneOccupationIncomeDetailsDD },
         tempForAdditionalInfoFirst: { dataDD: additionalInfoFirstDD },
         tempForAdditionalInfoSecond: { dataDD: additionalInfoSecondDD },
